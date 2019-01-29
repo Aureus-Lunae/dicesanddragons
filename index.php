@@ -2,6 +2,8 @@
 
 <html lang="en-US">
 
+<?php require_once('php/root.php'); ?>
+
 <head>
   <meta charset="UTF-8" />
   <meta name="description" content=" " />
@@ -15,8 +17,10 @@
 
 <body>
 	<?php require_once('html/header.php'); ?>
+	<div class="content_wrapper">
 
 
+	</div>
 
 </body>
 
