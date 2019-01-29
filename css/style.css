@@ -9,12 +9,46 @@ body {
   font-family: "Laila", serif;
   background-color: #e4e7f2;
   padding: 5px 0;
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 .headerwrapper .logo {
   width: 500px;
+  float: left;
+  display: block;
 }
 .headerwrapper .logo img {
   width: 100%;
+}
+.headerwrapper .navbar {
+  display: block;
+  height: 100%;
+}
+.headerwrapper .navbar .menu {
+  margin: auto 0;
+  padding: 0;
+  list-style: none;
+  clear: none;
+  max-height: none;
+}
+.headerwrapper .navbar .menu li {
+  display: inline-block;
+  border-left: 1px solid #d3d8ea;
+}
+.headerwrapper .navbar .menu li a {
+  padding: 16px 24px;
+  display: block;
+  text-decoration: none;
+  color: #000;
+}
+.headerwrapper .navbar .menu li a:hover {
+  text-decoration: underline;
+  background: #c2c8e1;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,14 +1,55 @@
 /* Header */
 .headerwrapper {
 	font-family: 'Laila', serif;
-	background-color: $secondary_color;
+	background-color: $secondary-color;
 	padding: 5px 0;
+	position: fixed;
+	top: 0;
+	z-index: 5;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
 
 	.logo {
 		width: 500px;
+		float: left;
+		display: block;
 
 		img {
 			width: 100%;
 		}
 	}
+
+	.navbar {
+		display: block;
+		height: 100%;
+
+		.menu {
+			margin: auto 0;
+			padding: 0;
+			list-style: none;
+			clear: none;
+			max-height: none;
+
+			li {
+				display: inline-block;
+				border-left: 1px solid $tertiary-color;
+
+				a {
+					padding: 16px 24px;
+					display: block;
+					text-decoration: none;
+					color: $primary-text-color;
+
+					&:hover {
+						text-decoration: underline;
+						background: $hover-color;
+					}
+				}
+			}
+		}
+	}
+
+
 }
