@@ -6,6 +6,9 @@ if (!isset( $_SESSION['loggedin'] )) {
 	$_SESSION['loggedin'] = 0;
 }
 
+$root = $_SERVER['HTTP_HOST'];
+$root='http://'.$root.'/diceandragons/';
+
 class getDBData {
 	private $db_query;
 	private $db_conn;
@@ -33,7 +36,7 @@ class user {
 
 	public function checkAccess($access) {
 		if ($this->accss < $access) {
-			header("Location: ../../index.php");
+			header('Location: ' . $root . 'index.php');
 		}
 	}
 

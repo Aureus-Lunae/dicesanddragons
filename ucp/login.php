@@ -4,7 +4,6 @@
 
 <?php 
 require('../php/classes.php');
-require_once('../php/root.php'); 
 ?>
 
 <head>
