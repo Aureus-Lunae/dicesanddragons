@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+}
+
+/* Header */
+.headerwrapper {
+  font-family: "Laila", serif;
+  background-color: #e4e7f2;
+  padding: 5px 0;
+}
+.headerwrapper .logo {
+  width: 500px;
+}
+.headerwrapper .logo img {
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
