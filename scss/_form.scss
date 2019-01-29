@@ -1,0 +1,41 @@
+/* default form values */
+
+form {
+
+	a {
+		text-decoration: none;
+		color: $secondary-text-color;
+
+		&:hover {
+			text-decoration: underline;
+			color: $tertairy-text-color;
+		}
+	}
+
+	h1 {
+		font-size: 1.5em;
+	}
+
+	label {
+		margin-top: 10px;
+		display: block;
+	}
+
+	input {
+		display: block;
+		border-radius: 4px;
+	}
+
+	button {
+		margin-top: 20px;
+		border-radius: 8px;
+		padding: 4px 10px;
+		background: $tertiary-color;
+
+		&:active {
+			position: relative;
+			top: 2px;
+			left: 2px;
+		}
+	}
+}
