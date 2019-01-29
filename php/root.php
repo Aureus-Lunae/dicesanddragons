@@ -1,4 +1,4 @@
 <?php
-$root = $_SERVER['HTTP_HOST'];
-$root='http://'.$root.'/diceandragons/';
+	$root = $_SERVER['HTTP_HOST'];
+	$root='http://'.$root.'/diceandragons/';
 ?>

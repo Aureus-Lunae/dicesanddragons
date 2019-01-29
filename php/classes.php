@@ -1,4 +1,10 @@
 <?php
+$_SESSION['loggedin'] = 0;
+
+session_start();
+if (!isset( $_SESSION['loggedin'] )) {
+	$_SESSION['loggedin'] = 0;
+}
 
 class getDBData {
 	private $db_query;
@@ -14,8 +20,27 @@ class getDBData {
 		$data -> execute($params);
 		return $data;
 	}
-
 }
 
+class user {
+	private $username;
+	private $access;
+
+	public function __construct($username, $access) {
+		$this -> username = $username;
+		$this -> access = $access;
+	}
+
+	public function checkAccess($access) {
+		if ($this->accss < $access) {
+			header("Location: ../../index.php");
+		}
+	}
+
+	public function showUsername(){
+		return $this -> username;
+	}
+
+}
 
 ?>

@@ -23,9 +23,9 @@
     <div class="form_wrapper">
       <div class="form_container">
         <div class="left_side"></div>
-        <div class="right-side">
+        <div class="right_side">
 
-          <form action="/diceandragons/php/login/registerhandler.php" method="POST">
+          <form action="/diceandragons/php/login/loginhandler.php" method="POST">
             <h1>Register</h1>
 
             <label for="firstname">First Name*:</label>
@@ -51,10 +51,10 @@
             <input type="text" id="country" name="country" maxlength="40">
 
             <input type="checkbox" name="tos" value="tos" class="tos" required>
-            <label for="tos" class="tos">I have read and agreed to the Terms of Service.</label>
+            <label for="tos" class="tos">I have read and agreed to the Terms of Service.</label><br />
             
             <button type="submit">Register</button>
-
+            
           </form>
         </div>
       </div>
