@@ -22,7 +22,11 @@ require('php/classes.php');
 
 	<?php require_once('html/header.php'); ?>
 	<div class="content_wrapper">
-
+		<div class="text_wrapper">
+			<h1>Dice Sets | Dices for D&D and other tabletop rpg games.</h1>
+			<img src="/diceandragons/img/dicebanner.png" alt="dices">
+			<p>In the world of gaming, a single die isn't going to do you much good. You need a lot of dices. Different RPGs require different dice sets. Each dice set gives you all the basics you need to game.</p>
+		</div>
     <div class="products_wrapper">
     	  
    	  <?php
