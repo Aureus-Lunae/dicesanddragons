@@ -38,6 +38,16 @@ require('../php/classes.php');
 
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" minlength="8">
+            <?php 
+              if ($_SESSION['failcount'] >0) {
+                if ($_SESSION['failcount'] > 4) {
+                  echo '<div>Max attempts reached.</div>'; 
+                } else {
+                  $attemptsRemaining = 5 - $_SESSION['failcount'];
+                  echo '<div>Username of Password is incorrect! You have '. $attemptsRemaining . ' attempts remaining</div>'; 
+                }  
+              }
+            ?>
 
             <button type="submit">Login</button>
 
@@ -46,7 +56,7 @@ require('../php/classes.php');
           <?php 
           } else {
         ?>
-          <p>You have already been logged in</p>
+          <p>You have already been logged in!</p>
           <?php 
           }
         ?>

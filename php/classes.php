@@ -3,6 +3,7 @@ $_SESSION['loggedin'] = 0;
 
 session_start();
 if (!isset( $_SESSION['loggedin'] )) {
+	$_SESSION['failcount'] = 0;
 	$_SESSION['loggedin'] = 0;
 }
 

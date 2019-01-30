@@ -2,6 +2,10 @@
 	require '../classes.php';
 	require '../db/connect.php';
 
+	if ($_SESSION['failcount'] >= 5) {
+		header('Location: ' . $root . 'index.php');
+	}
+
 	$email = $_POST['email'];
 	$password = $_POST['password'];
 
@@ -15,10 +19,11 @@
 	$row_count = $loginCheck->rowCount();
 
 	if ($row_count == 0) {
-		echo 'User not found';
+		$_SESSION['failcount']++;
+		header('Location: ' . $root . 'ucp/login.php');
 	} else {
 
-		$loginPassword = $loginCheck ->fetch(PDO::FETCH_ASSOC);
+		$loginPassword = $loginCheck -> fetch(PDO::FETCH_ASSOC);
 		$hash = $loginPassword['user_password'];
 
 		if (password_verify($password, $hash)) {
@@ -31,13 +36,13 @@
 			$username = $user['user_firstname'] . ' ' . $user['user_lastname'];
 
 			$_SESSION['user'] = new user($username, $user['access']);
-			$_SESSION["loggedin"] = 1;
-			echo "Successfully logged in <br />";
-			echo $_SESSION['loggedin'];
-			var_dump($_SESSION['user']);
+			$_SESSION['loggedin'] = 1;
+			header('Location: ' . $root . 'index.php');
+
 
 		} else {
-			echo "invalid Password";
+			$_SESSION['failcount']++;
+			header('Location: ' . $root . 'ucp/login.php');
 		}
 	}
 
