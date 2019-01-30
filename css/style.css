@@ -135,6 +135,69 @@ form button:active {
   display: inline;
 }
 
+/* Products */
+.products_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  margin-left: 48px;
+  width: calc(100% - 64px);
+}
+
+/* Product Cards */
+.product_card {
+  margin: 10px;
+  border: 1px solid #d3d8ea;
+  border-radius: 8px;
+  width: 300px;
+  transition: transform 0.5s;
+}
+.product_card:hover {
+  transform: scale(1.1);
+  transition: transform 0.5s;
+}
+.product_card img {
+  border-radius: 8px 8px 0 0;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+}
+.product_card .details {
+  display: flex;
+  float: left;
+  width: 225px;
+  height: 100px;
+  box-sizing: border-box;
+  margin-top: -4px;
+  align-items: center;
+}
+.product_card .details h1 {
+  margin: 2px;
+  padding: 5px;
+  font-size: 24px;
+  font-weight: 700;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.product_card .price {
+  float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 75px;
+  background: #e4e7f2;
+  margin-top: -4px;
+  border-radius: 0 0 8px 0;
+  cursor: pointer;
+}
+.product_card .price:hover {
+  background: #d3d8ea;
+}
+
 /* Modal */
 .modal {
   top: 0;

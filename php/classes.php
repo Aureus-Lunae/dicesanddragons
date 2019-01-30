@@ -1,7 +1,7 @@
 <?php
-$_SESSION['loggedin'] = 0;
 
 session_start();
+
 if (!isset( $_SESSION['loggedin'] )) {
 	$_SESSION['failcount'] = 0;
 	$_SESSION['loggedin'] = 0;
@@ -10,6 +10,11 @@ if (!isset( $_SESSION['loggedin'] )) {
 $root = $_SERVER['HTTP_HOST'];
 $root='http://'.$root.'/diceandragons/';
 
+//classes
+
+/**
+ * Database classes
+ */
 class getDBData {
 	private $db_query;
 	private $db_conn;
@@ -26,6 +31,9 @@ class getDBData {
 	}
 }
 
+/**
+ * User Classes
+ */
 class user {
 	private $username;
 	private $access;
@@ -35,7 +43,7 @@ class user {
 		$this -> access = $access;
 	}
 
-	public function checkAccess($access) {
+	public function requiredAccess($access) {
 		if ($this->accss < $access) {
 			header('Location: ' . $root . 'index.php');
 		}
@@ -45,6 +53,9 @@ class user {
 		return $this -> username;
 	}
 
+	public function checkAccess() {
+			return $this -> access;
+	}
 }
 
 ?>
