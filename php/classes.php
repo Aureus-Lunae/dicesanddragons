@@ -58,4 +58,46 @@ class user {
 	}
 }
 
+/**
+ * Cards
+ */
+
+class productCard {
+	private $cardName;
+	private $cardPhoto;
+	private $cardPrice;
+	private $cardCat;
+
+	public function __construct($name, $photo, $price, $cat) {
+		$this -> cardName = $name;
+		$this -> cardPhoto = $photo;
+		$this -> cardPrice = $price;
+		switch ($cat) {
+			case 0:
+				$this -> cardCat = '7dice';
+				break;
+			case 1: 
+				$this -> cardCat = '12d6';
+				break;
+			case 2:
+				$this -> cardCat = '10d10';
+				break;
+			default:
+				$this -> cardCat = '7dice';
+				break;
+		}
+	}
+
+	public function showCard() {
+		echo '<div class="product_card">
+   	  	<img src="/diceandragons/img/' . $this -> cardCat .'/' . $this -> cardPhoto .'" alt="' . $this -> cardName . '" />
+   	  	<div class="details">
+   	  		<h1>' . $this -> cardName . '</h1>
+   	  	</div>
+   	  	<div class="price">€' . $this -> cardPrice . '</div>
+   	  	</div>';
+	}
+}
+
+
 ?>

@@ -25,25 +25,10 @@ require('php/classes.php');
 
     <div class="products_wrapper">
     	  
-   	  <div class="product_card">
-   	  	<img src="img/test.jpg" alt="logo" />
-   	  	<div class="details">
-   	  		<h1>Test Product</h1>
-   	  	</div>
-   	  	<div class="price">€86.99</div>
-   	  	<!-- <div class="add_cart"><i class="fas fa-cart-plus"></i>
-   	  	</div> -->
-   	  </div>
-   	  <div class="product_card">
-   	  	<img src="img/test.jpg" alt="logo" />
-   	  	<div class="details">
-   	  		<h1>Test Product</h1>
-   	  	</div>
-   	  	<div class="price">€86.99</div>
-   	  	<!-- <div class="add_cart"><i class="fas fa-cart-plus"></i>
-   	  	</div> -->
-   	  </div>
-   	  
+   	  <?php
+   	  	require 'php/productscards.php';
+   	  ?>
+
     </div>
     
 	</div>
