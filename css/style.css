@@ -3,6 +3,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   min-height: 100%;
+  background: #f2f2f2;
 }
 
 .debug {
@@ -378,7 +379,7 @@ form button:active {
 }
 
 .modal_content {
-  background: #d9d9d9;
+  background: #f2f2f2;
   padding: 10px;
   margin: 130px auto 20px auto;
   border: 1px solid #000;

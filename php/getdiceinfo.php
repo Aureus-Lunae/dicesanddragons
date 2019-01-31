@@ -50,7 +50,7 @@
           <p>' . $desc . '</p>
 
           <div class="shop">
-            <div class="price">€999.99</div>
+            <div class="price">€' . $price . '</div>
             <div class="add">Add to cart</div>
           </div>
         </div>
