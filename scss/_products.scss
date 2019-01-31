@@ -2,7 +2,7 @@
 
 .text_wrapper {
 	margin-left: 48px;
-	width: calc(100% - 64px);
+	width: calc(100% - 96px);
 
 	img {
 		width: 100%;
@@ -19,9 +19,51 @@
 	align-items: flex-start;
 	align-content: flex-start;
 	margin-left: 48px;
-	width: calc(100% - 64px);
+	width: calc(100% - 96px);
 }
 
+/* filters */
+
+.products_filter {
+	background: $secondary-color;
+	color: $secondary_text_color;
+	position: sticky;
+	top: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+	margin-left: 48px;
+	width: calc(100% - 96px);
+	border-radius: 8px;
+	z-index: 3;
+
+	.text {
+		padding: 10px 10px 5px 10px;
+		border-right: 2px solid $tertiary-color;
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	.filter {
+		padding: 10px 10px 5px 10px;
+		width: 10%;
+		border-right: 2px solid $tertiary-color;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 700;
+		cursor: pointer;
+
+		&:hover {
+			background: $secondary-color-highlight;
+		}
+	}
+}
+
+.active {
+	background: $tertiary-color !important;
+}
 
 /* Product Cards */
 .product_card {
