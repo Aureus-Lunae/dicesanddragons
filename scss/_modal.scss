@@ -34,11 +34,11 @@
 
 
 .modal_button {
-	color: $secondary_text_color;
+	color: $tertairy_text_color;
 	cursor: pointer;
 
 	&:hover {
 		text-decoration: underline;
-		color: $tertairy-text-color;
+		color: $secondary-text-color;
 	}
 }

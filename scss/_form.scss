@@ -1,14 +1,15 @@
 /* default form values */
 
 form {
+	color: $secondary-text-color;
 
 	a {
 		text-decoration: none;
-		color: $secondary-text-color;
+		color: $tertairy_text_color;
 
 		&:hover {
 			text-decoration: underline;
-			color: $tertairy-text-color;
+			color: $secondary_text_color;
 		}
 	}
 
@@ -38,6 +39,7 @@ form {
 		border-radius: 8px;
 		padding: 4px 10px;
 		background: $tertiary-color;
+		color: $secondary_text_color;
 
 		&:active {
 			position: relative;

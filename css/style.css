@@ -18,7 +18,8 @@ body {
 /* Header */
 .headerwrapper {
   font-family: "Laila", serif;
-  background-color: #e4e7f2;
+  background-color: rebeccapurple;
+  color: #e6e6e6;
   padding: 5px 0;
   position: fixed;
   top: 0;
@@ -49,27 +50,30 @@ body {
 }
 .headerwrapper .navbar .menu li {
   display: inline-block;
-  border-left: 1px solid #d3d8ea;
+  border-left: 1px solid #339966;
 }
 .headerwrapper .navbar .menu li a {
   padding: 16px 24px;
   display: block;
   text-decoration: none;
-  color: #000;
+  color: #e6e6e6;
 }
 .headerwrapper .navbar .menu li a:hover {
   text-decoration: underline;
-  background: #c2c8e1;
+  background: #339966;
 }
 
 /* default form values */
+form {
+  color: #e6e6e6;
+}
 form a {
   text-decoration: none;
-  color: #3d4c7f;
+  color: #b8f73b;
 }
 form a:hover {
   text-decoration: underline;
-  color: #3d4c7f;
+  color: #e6e6e6;
 }
 form h1 {
   font-size: 1.5em;
@@ -92,7 +96,8 @@ form button {
   margin-top: 20px;
   border-radius: 8px;
   padding: 4px 10px;
-  background: #d3d8ea;
+  background: #339966;
+  color: #e6e6e6;
 }
 form button:active {
   position: relative;
@@ -115,7 +120,7 @@ form button:active {
 .form_container {
   width: 700px;
   min-width: 300px;
-  background: #e4e7f2;
+  background: rebeccapurple;
   box-sizing: border-box;
   border-radius: 16px;
   padding: 16px;
@@ -160,7 +165,7 @@ form button:active {
 /* Product Cards */
 .product_card {
   margin: 10px;
-  border: 1px solid #d3d8ea;
+  border: 1px solid #339966;
   border-radius: 8px;
   width: 300px;
   transition: transform 0.5s;
@@ -175,7 +180,7 @@ form button:active {
   height: 300px;
   object-fit: cover;
   cursor: pointer;
-  border-bottom: 1px solid #e4e7f2;
+  border-bottom: 1px solid rebeccapurple;
 }
 .product_card .details {
   display: flex;
@@ -201,13 +206,13 @@ form button:active {
   justify-content: center;
   height: 100px;
   width: 75px;
-  background: #e4e7f2;
+  background: rebeccapurple;
   margin-top: -4px;
   border-radius: 0 0 8px 0;
   cursor: pointer;
 }
 .product_card .price:hover {
-  background: #d3d8ea;
+  background: #339966;
 }
 
 /* Modal */
@@ -223,7 +228,7 @@ form button:active {
 }
 
 .modal_content {
-  background: #fff;
+  background: #d9d9d9;
   padding: 10px;
   margin: 130px auto 20px auto;
   border: 1px solid #000;
@@ -242,12 +247,12 @@ form button:active {
 }
 
 .modal_button {
-  color: #3d4c7f;
+  color: #b8f73b;
   cursor: pointer;
 }
 .modal_button:hover {
   text-decoration: underline;
-  color: #3d4c7f;
+  color: #e6e6e6;
 }
 
 /*# sourceMappingURL=style.css.map */
