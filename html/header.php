@@ -5,6 +5,7 @@
 	<div class=navbar>
 		<ul class="menu">
 			<li><a href="/diceandragons/">Home</a></li>
+			<li><a href="/diceandragons/products.php">Products</a></li>
       <?php 
         if ($_SESSION['loggedin'] == 0) {
 				echo '<li><a href="/diceandragons/ucp/login.php">Login</a></li>';

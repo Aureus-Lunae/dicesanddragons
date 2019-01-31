@@ -168,6 +168,8 @@ form button:active {
   border: 1px solid #339966;
   border-radius: 8px;
   width: 300px;
+  background: rebeccapurple;
+  color: #e6e6e6;
   transition: transform 0.5s;
 }
 .product_card:hover {
@@ -206,13 +208,13 @@ form button:active {
   justify-content: center;
   height: 100px;
   width: 75px;
-  background: rebeccapurple;
+  background: #339966;
   margin-top: -4px;
   border-radius: 0 0 8px 0;
   cursor: pointer;
 }
 .product_card .price:hover {
-  background: #339966;
+  background: #2e6b4d;
 }
 
 /* Modal */
