@@ -47,7 +47,7 @@
         </div>
 
         <div class="description">
-          <p> descr </p>
+          <p>' . $desc . '</p>
 
           <div class="shop">
             <div class="price">€999.99</div>
