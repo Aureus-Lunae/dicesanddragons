@@ -82,6 +82,7 @@
 	.img_container {
 		margin: 10px;
 		min-width: 300px;
+		max-width: 500px;
 		width: 40%;
 		padding: 8px 8px 8px 20px;
 		display: flex;
@@ -92,11 +93,12 @@
 	.description {
 		width: 45%;
 		min-width: 400px;
+		max-height: 500px;
 		margin: 10px;
 		padding: 8px;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
+		justify-content: space-around;
 
 		p {
 			width: 100%;
@@ -138,7 +140,7 @@
 }
 
 .product_img {
-	background: red;
+	border: 1px solid $quaternary-color;
 	position: relative;
 	width: 100%;
 	background-position: center;

@@ -32,25 +32,7 @@ require('php/classes.php');
     <div class="products_wrapper">
       <?php
        require('php/getdiceinfo.php'); ?>
-      <div class="product_info">
-        <h1>Example Title - 7dice</h1>
-
-        <div class="img_container">
-          <div class="product_img" style="background-image: url('img/7dice/pinkghostlyglow.png')">
-          </div>
-        </div>
-
-        <div class="description">
-          <p>
-            descr
-          </p>
-
-          <div class="shop">
-            <div class="price">€999.99</div>
-            <div class="add">Add to cart</div>
-          </div>
-        </div>
-      </div>
+    
 
     </div>
 
