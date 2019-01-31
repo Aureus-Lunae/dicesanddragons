@@ -22,6 +22,14 @@ require('php/classes.php');
 	<?php require_once('html/header.php'); ?>
 	<div class="content_wrapper">
 
+    <div class="products_wrapper" id="product_output">
+    <div class="featured_banner">
+      <h1>Featured dice</h1>
+    </div>
+      <?php
+        require 'php/featuredcards.php';
+      ?>
+    </div>
 
 	</div>
 </body>

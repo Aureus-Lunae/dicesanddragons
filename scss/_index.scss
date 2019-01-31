@@ -1,0 +1,19 @@
+.featured_banner {
+	background: $secondary-color;
+	color: $secondary_text_color;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+	align-content: flex-start;
+	margin-left: 48px;
+	width: calc(100% - 96px);
+	border-radius: 8px;
+	z-index: 3;
+
+	h1 {
+		padding: 10px 10px 5px 10px;
+		font-size: 20px;
+		font-weight: 700;
+	}
+}
