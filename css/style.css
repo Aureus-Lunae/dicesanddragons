@@ -18,7 +18,7 @@ body {
 /* Header */
 .headerwrapper {
   font-family: "Laila", serif;
-  background-color: rebeccapurple;
+  background-color: #0099cc;
   color: #e6e6e6;
   padding: 5px 0;
   position: fixed;
@@ -30,7 +30,8 @@ body {
   align-items: flex-end;
 }
 .headerwrapper .logo {
-  width: 500px;
+  width: 320px;
+  margin-left: 10px;
   float: left;
   display: block;
 }
@@ -50,7 +51,7 @@ body {
 }
 .headerwrapper .navbar .menu li {
   display: inline-block;
-  border-left: 1px solid #339966;
+  border-left: 1px solid #99cc00;
 }
 .headerwrapper .navbar .menu li a {
   padding: 16px 24px;
@@ -60,7 +61,7 @@ body {
 }
 .headerwrapper .navbar .menu li a:hover {
   text-decoration: underline;
-  background: #339966;
+  background: #99cc00;
 }
 
 /* default form values */
@@ -96,7 +97,7 @@ form button {
   margin-top: 20px;
   border-radius: 8px;
   padding: 4px 10px;
-  background: #339966;
+  background: #99cc00;
   color: #e6e6e6;
 }
 form button:active {
@@ -120,7 +121,7 @@ form button:active {
 .form_container {
   width: 700px;
   min-width: 300px;
-  background: rebeccapurple;
+  background: #0099cc;
   box-sizing: border-box;
   border-radius: 16px;
   padding: 16px;
@@ -165,10 +166,10 @@ form button:active {
 /* Product Cards */
 .product_card {
   margin: 10px;
-  border: 1px solid #339966;
+  border: 1px solid #99cc00;
   border-radius: 8px;
   width: 300px;
-  background: rebeccapurple;
+  background: #0099cc;
   color: #e6e6e6;
   transition: transform 0.5s;
 }
@@ -182,7 +183,7 @@ form button:active {
   height: 300px;
   object-fit: cover;
   cursor: pointer;
-  border-bottom: 1px solid rebeccapurple;
+  border-bottom: 1px solid #0099cc;
 }
 .product_card .details {
   display: flex;
@@ -208,13 +209,13 @@ form button:active {
   justify-content: center;
   height: 100px;
   width: 75px;
-  background: #339966;
+  background: #99cc00;
   margin-top: -4px;
   border-radius: 0 0 8px 0;
   cursor: pointer;
 }
 .product_card .price:hover {
-  background: #2e6b4d;
+  background: #6b8a0f;
 }
 
 /* Modal */
