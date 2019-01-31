@@ -63,12 +63,14 @@ class user {
  */
 
 class productCard {
+	private $cardId;
 	private $cardName;
 	private $cardPhoto;
 	private $cardPrice;
 	private $cardCat;
 
-	public function __construct($name, $photo, $price, $cat) {
+	public function __construct($cardId, $name, $photo, $price, $cat) {
+		$this -> cardId = $cardId;
 		$this -> cardName = $name;
 		$this -> cardPhoto = $photo;
 		$this -> cardPrice = $price;
@@ -89,8 +91,8 @@ class productCard {
 	}
 
 	public function showCard() {
-		echo '<div class="product_card">
-   	  	<img src="/diceandragons/img/' . $this -> cardCat .'/' . $this -> cardPhoto .'" alt="' . $this -> cardName . '" />
+		echo '<div class="product_card"><a href="/diceandragons/diceinfo.php?id=' . $this -> cardId . '">
+   	  	<img src="/diceandragons/img/' . $this -> cardCat .'/' . $this -> cardPhoto .'" alt="' . $this -> cardName . '" /></a>
    	  	<div class="details">
    	  		<h1>' . $this -> cardName . '</h1>
    	  	</div>
