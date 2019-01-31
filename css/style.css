@@ -83,6 +83,13 @@ body {
   font-weight: 700;
 }
 
+.herowrapper {
+  margin-top: -15px;
+  height: calc(100vh - 100px);
+  width: 100%;
+  background-size: cover;
+}
+
 /* default form values */
 form {
   color: #e6e6e6;

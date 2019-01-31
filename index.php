@@ -21,7 +21,8 @@ require('php/classes.php');
 <body>
 	<?php require_once('html/header.php'); ?>
 	<div class="content_wrapper">
-
+    <div class="herowrapper" style="background-image: url('img/heroimg.jpg')">
+    </div>
     <div class="products_wrapper" id="product_output">
     <div class="featured_banner">
       <h1>Featured dice</h1>
