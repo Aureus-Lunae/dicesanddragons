@@ -189,7 +189,7 @@
         <div class="left_side"></div>
         <div class="right_side">
 
-          <form action="/diceandragons/php/login/loginhandler.php" method="POST">
+          <form action="/diceandragons/php/login/registerhandler.php" method="POST">
             <h1>Register</h1>
 
             <label for="firstname">First Name*:</label>

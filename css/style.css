@@ -65,6 +65,28 @@ body {
   background: #99cc00;
 }
 
+.userbutton:hover .dropdown_user {
+  display: block;
+}
+
+.dropdown_user {
+  display: none;
+  position: absolute;
+  z-index: 6;
+  background-color: #0099cc;
+  color: #e6e6e6;
+}
+.dropdown_user a {
+  padding: 16px 24px;
+  display: block;
+  text-decoration: none;
+  color: #e6e6e6;
+}
+.dropdown_user a:hover {
+  text-decoration: underline;
+  background: #99cc00;
+}
+
 .featured_banner {
   background: #0099cc;
   color: #e6e6e6;

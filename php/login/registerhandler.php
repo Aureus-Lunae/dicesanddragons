@@ -21,5 +21,6 @@
 	$result = $insertRegister -> getData(array(':first'=>"$firstname" , ':last'=>"$lastname", ':email' => "$email", ':password' => "$password_hashed", ':adress' => "$adress", ':city' => "$city", ':post' => "$postcode", 'country' => "$country"));
 
 	echo "Registered successfully!";
+	header('Location: ' . $root . 'ucp/login.php');
 
 ?>

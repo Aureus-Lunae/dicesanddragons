@@ -10,7 +10,13 @@
         if ($_SESSION['loggedin'] == 0) {
 				echo '<li><a href="/diceandragons/ucp/login.php">Login</a></li>';
 				} else { 
-				echo '<li><a href="#">' . $_SESSION['user']->showUsername() . '</a></li>';
+				echo '<li class="userbutton"><a href="#">' . $_SESSION['user']->showUsername() . '</a>
+					<div class="dropdown_user">
+						<a href="#">Change Password</a>';
+						if ($_SESSION['user']->checkAccess() > 1) {
+							echo '<a href="#">Add Products</a>';
+						}
+					echo '</li>';
 				echo '<li><a href="/diceandragons/php/login/logout.php">Log out</a></li>';
         }
       ?>

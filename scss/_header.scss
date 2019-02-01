@@ -53,3 +53,27 @@
 		}
 	}
 }
+
+.userbutton:hover .dropdown_user {
+	display: block;
+}
+
+.dropdown_user {
+	display: none;
+	position: absolute;
+	z-index: 6;
+	background-color: $secondary-color;
+	color: $secondary_text_color;
+
+	a {
+		padding: 16px 24px;
+		display: block;
+		text-decoration: none;
+		color: $secondary_text_color;
+
+		&:hover {
+			text-decoration: underline;
+			background: $tertiary-color;
+		}
+	}
+}
