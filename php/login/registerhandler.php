@@ -22,9 +22,4 @@
 
 	echo "Registered successfully!";
 
-	// $db_result = $conn->prepare($sql_query);
-
-	// $db_result->execute();
-	//array(':name'=>"%{$search}%")
-
 ?>

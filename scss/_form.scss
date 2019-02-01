@@ -30,8 +30,28 @@ form {
 
 	input[type="checkbox"] {
 		display: block;
+		width: 13px;
+	}
+
+	input[type="radio"] {
+		display: inline-block;
 		border-radius: 4px;
 		width: 13px;
+	}
+
+	input[type="file"] {
+		margin-top: 10px;
+	}
+
+	#product_price {
+		width: 50px;
+	}
+
+	textarea {
+		margin: 10px 0;
+		display: block;
+		width: 400px;
+		height: 200px;
 	}
 
 	button {
@@ -47,4 +67,12 @@ form {
 			left: 2px;
 		}
 	}
+}
+
+.addproduct_container {
+	min-width: 300px;
+	background: $secondary-color;
+	box-sizing: border-box;
+	border-radius: 16px;
+	padding: 16px;
 }

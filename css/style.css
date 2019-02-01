@@ -119,8 +119,24 @@ form input {
 }
 form input[type=checkbox] {
   display: block;
+  width: 13px;
+}
+form input[type=radio] {
+  display: inline-block;
   border-radius: 4px;
   width: 13px;
+}
+form input[type=file] {
+  margin-top: 10px;
+}
+form #product_price {
+  width: 50px;
+}
+form textarea {
+  margin: 10px 0;
+  display: block;
+  width: 400px;
+  height: 200px;
 }
 form button {
   margin-top: 20px;
@@ -133,6 +149,14 @@ form button:active {
   position: relative;
   top: 2px;
   left: 2px;
+}
+
+.addproduct_container {
+  min-width: 300px;
+  background: #0099cc;
+  box-sizing: border-box;
+  border-radius: 16px;
+  padding: 16px;
 }
 
 /* UCP */
