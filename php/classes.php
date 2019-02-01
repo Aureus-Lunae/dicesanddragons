@@ -7,7 +7,7 @@ if (!isset( $_SESSION['loggedin'] )) {
 	$_SESSION['loggedin'] = 0;
 }
 
-$root = $_SERVER['HTTP_HOST'];
+$root=$_SERVER['HTTP_HOST'];
 $root='http://'.$root.'/diceandragons/';
 
 //classes
@@ -44,7 +44,9 @@ class user {
 	}
 
 	public function requiredAccess($access) {
-		if ($this->accss < $access) {
+		if ($this->access < $access) {
+			$root=$_SERVER['HTTP_HOST'];
+			$root='http://'.$root.'/diceandragons/';
 			header('Location: ' . $root . 'index.php');
 		}
 	}

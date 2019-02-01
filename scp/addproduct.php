@@ -2,7 +2,9 @@
 
 <html lang="en-US">
 
-<?php require_once('../php/classes.php'); ?>
+<?php require_once('../php/classes.php'); 
+  $_SESSION['user']->requiredAccess(2);
+?>
 
 <head>
   <meta charset="UTF-8" />

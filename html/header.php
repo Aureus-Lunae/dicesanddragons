@@ -14,7 +14,7 @@
 					<div class="dropdown_user">
 						<a href="#">Change Password</a>';
 						if ($_SESSION['user']->checkAccess() > 1) {
-							echo '<a href="#">Add Products</a>';
+							echo '<a href="/diceandragons/scp/addproduct.php">Add Products</a>';
 						}
 					echo '</li>';
 				echo '<li><a href="/diceandragons/php/login/logout.php">Log out</a></li>';
