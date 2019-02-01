@@ -33,7 +33,7 @@
             <label for="product_name">Name:</label>
             <input type="text" id="product_name" name="product_name" maxlength="32" autofocus required>
             <label for="product_price">Price:</label>
-            <input type="number" id="product_price" name="product_price" maxlength="6" required>
+            <input type="number" id="product_price" name="product_price" maxlength="6" step="any" required>
 
             <label for="product_cat">Category:</label>
             <input type="radio" name="product_cat" id="product_cat" value="0" required>7-dice<br />
@@ -45,7 +45,11 @@
             <textarea name="product_desc" id="product_desc" maxlength="2000"></textarea required> 
             
             <button type="submit">Add new product</button>
-            
+            <?php 
+              if (isset($_GET['add'])) {
+                echo '<p>Product has been added</p>';
+              }
+            ?>
           </form>
       </div>
     </div>

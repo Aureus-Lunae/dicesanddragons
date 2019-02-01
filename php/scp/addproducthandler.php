@@ -70,7 +70,7 @@ if (isset($_POST)){
 		}
 	}
 
-	header('Location: ../../');
+	header('Location: ../../scp/addproduct.php?add=1');
 
 }
 
