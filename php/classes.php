@@ -59,6 +59,21 @@ class user {
 		$_SESSION['success'] = 30;
 	}
 
+	public function changeEmail($conn, $newemail) {
+		$checkEmail = $conn ->  prepare('SELECT COUNT(user_email) as count FROM users WHERE user_email = :email');
+		$checkEmail -> execute(array(':email'=> $newemail));
+		$emailExists = $checkEmail -> fetch(PDO::FETCH_ASSOC);
+
+		if ($emailExists['count'] == 1 ){
+			$_SESSION['error'] = 31;
+		} else {
+			$updateEmail = $conn -> prepare('UPDATE users SET user_email = :email WHERE user_id = ' . $this -> user_id);
+			$updateEmail -> execute(array(':email'=> $newemail));
+			$_SESSION['success'] = 32;
+		}
+	}
+
+
 	public function __get( $property ) {
 		return $this->$property;
 	}

@@ -36,7 +36,7 @@ require('../php/classes.php');
             <input type="email" id="email" name="email" maxlength="50">
 
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" minlength="8">
+            <input type="password" id="password" name="password">
             <?php 
               if ($_SESSION['failcount'] >0) {
                 if ($_SESSION['failcount'] > 4) {

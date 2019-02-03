@@ -4,7 +4,7 @@
 
 	$firstname = $_POST['firstname'];
 	$lastname = $_POST['lastname'];
-	$email = $_POST['email'];
+	$email = mb_strtolower($_POST['email']);
 	$password = $_POST['password'];
 
 	$password_hashed = password_hash($password, PASSWORD_BCRYPT);

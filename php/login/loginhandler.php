@@ -6,7 +6,7 @@
 		header('Location: ' . $root . 'index.php');
 	}
 
-	$email = $_POST['email'];
+	$email = mb_strtolower($_POST['email']);
 	$password = $_POST['password'];
 
 	$sql_query = 'SELECT user_password FROM users WHERE user_email = :email';
