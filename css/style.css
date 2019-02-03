@@ -137,6 +137,7 @@ form label {
 form .error {
   color: red;
 }
+form select,
 form input {
   outline: none;
   display: block;

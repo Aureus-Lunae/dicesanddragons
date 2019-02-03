@@ -53,6 +53,12 @@ class user {
 		}
 	}
 
+	public function changeAddress($conn, $address, $city, $postcode, $country) {
+		$updateAddress = $conn -> prepare('UPDATE users SET user_adress = :address, user_city = :city, user_postcode = :postcode, user_country = :country  WHERE user_id = ' . $this -> user_id);
+		$updateAddress -> execute(array(':address'=> $address, ':city'=> $city, ':postcode'=> $postcode, ':country'=> $country));
+		$_SESSION['success'] = 33;
+	}
+
 	public function changePassword($conn, $hash) {
 		$updatePassword = $conn -> prepare('UPDATE users SET user_password = :hash WHERE user_id = ' . $this -> user_id);
 		$updatePassword -> execute(array(':hash'=> $hash));

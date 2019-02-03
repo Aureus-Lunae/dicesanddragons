@@ -13,7 +13,8 @@
 				echo '<li class="userbutton"><a href="#">' . $_SESSION['user']->username . '</a>
 					<div class="dropdown_user">
 						<a href="/diceandragons/ucp/changepassword.php">Change Password</a>
-						<a href="/diceandragons/ucp/changeemail.php">Change Email</a>';
+						<a href="/diceandragons/ucp/changeemail.php">Change Email</a>
+						<a href="/diceandragons/ucp/changeaddress.php">Change address</a>';
 						if ($_SESSION['user']->access > 1) {
 							echo '<a href="/diceandragons/scp/addproduct.php">Add Products</a>';
 						}

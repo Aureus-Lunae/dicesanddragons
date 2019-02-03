@@ -4,7 +4,11 @@
 
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 	$password = $_POST['password'];
-	$newemail = $_POST['newemail'];
+	$address = $_POST['address'];
+	$city = $_POST['city'];
+	$postcode = $_POST['postcode'];
+	$country = $_POST['country'];
+
 
 	$checkpassword = new getDBData($conn, 'SELECT user_password FROM users WHERE user_id = :id');
 
@@ -12,15 +16,16 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' ) {
 
 	$hash = $retrieveHash -> fetch(PDO::FETCH_ASSOC);
 	if (password_verify($password, $hash['user_password'])){
-		$_SESSION['user'] -> changeEmail($conn, $newemail);
-		header('location: /diceandragons/ucp/changeemail.php');
+
+		$_SESSION['user'] -> changeAddress($conn, $address, $city, $postcode, $country);
+		header('location: /diceandragons/ucp/changeaddress.php');
 	} else {
 		$_SESSION['error'] = 10;
-		header('location: /diceandragons/ucp/changeemail.php');
+		header('location: /diceandragons/ucp/changeaddress.php');
 	}
 
 } else {
-	header('location: /diceandragons/ucp/changeemail.php');
+	header('location: /diceandragons/ucp/changeaddress.php');
 }
 
 ?>

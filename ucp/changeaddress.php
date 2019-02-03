@@ -13,7 +13,7 @@ $_SESSION['user']->requiredAccess(1);
   <meta name="keywords" content=" " />
   <meta name="author" content="Erwin Korsten" />
   <meta name="viewport" width="device-width" initial-scale="1.0">
-  <title>Change User</title>
+  <title>Change Adress</title>
   <link href="https://fonts.googleapis.com/css?family=Laila:400,700|Roboto:400,700"
    rel="stylesheet">
   <link href="/diceandragons/css/style.css" rel="stylesheet" type="text/css"
@@ -28,14 +28,14 @@ $_SESSION['user']->requiredAccess(1);
     <div class="form_wrapper">
       <div class="form_container">
         <div class="left_side">
-          <form action="/diceandragons/php/login/changepasswordhandler.php" method="POST">
-            <h1>Change Password</h1>
+          <form action="/diceandragons/php/login/changeadresshandler.php" method="POST">
+            <h1>Change Address</h1>
 
             <?php
             if (isset($_SESSION['success'])){
               switch ($_SESSION['success']){
-                case 30: 
-                  $sussess = 'Password has been updated!';
+                case 33: 
+                  $sussess = 'Address has been updated!';
                   echo '<label class="success">' . $sussess . '</label>';
                   break;
                 default:
@@ -50,9 +50,6 @@ $_SESSION['user']->requiredAccess(1);
                 case 10: 
                   $error = 'Password is incorrect!';
                   break;
-                case 20: 
-                  $error = 'Passwords do not match!';
-                  break;
                 default:
                   $error = 'An unknown error has occured!';
                   break;
@@ -62,19 +59,25 @@ $_SESSION['user']->requiredAccess(1);
             }
             ?>
 
-            <label for="oldpassword">Password:</label>
-            <input type="password" id="oldpassword" name="oldpassword">
-
-            <label for="newpassword">New Password:</label>
-            <input type="password" id="newpassword" name="newpassword" minlength="8"
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"
              required>
 
-            <label for="repeatpassword">Repeat New Password:</label>
-            <input type="password" id="repeatpassword" name="repeatpassword"
-             minlength="8" required>
+            <label for="address">Street + number:</label>
+            <input type="text" id="address" name="address" required>
 
+            <label for="postcode">Postcode:</label>
+            <input type="text" id="postcode" name="postcode" required>
 
-            <button type="submit">Change Password</button>
+            <label for="city">City:</label>
+            <input type="text" id="city" name="city" required>
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+              <?php include '../php/countryoptions.php' ?>
+            </select>
+
+            <button type="submit">Change address</button>
             </p>
           </form>
         </div>
