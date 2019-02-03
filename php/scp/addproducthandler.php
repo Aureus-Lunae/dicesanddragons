@@ -10,7 +10,7 @@ if (isset($_POST)){
 	$cat = $_POST['product_cat'];
 
 
-	//Upload select category folder
+	//Upload select category folderz
 	switch ($cat){
 		case 0:
 			$catname="7dice";

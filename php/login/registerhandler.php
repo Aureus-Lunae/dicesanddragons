@@ -6,19 +6,15 @@
 	$lastname = $_POST['lastname'];
 	$email = $_POST['email'];
 	$password = $_POST['password'];
-	$adress = $_POST['adress'];
-	$postcode = $_POST['postcode'];
-	$city = $_POST['city'];
-	$country = $_POST['country'];
 
 	$password_hashed = password_hash($password, PASSWORD_BCRYPT);
 
 
-	$sql_query = 'INSERT INTO `users` (`user_id`, `user_firstname`, `user_lastname`, `user_email`, `user_password`, `user_adress`, `user_city`, `user_postcode`, `user_country`) VALUES (NULL, :first, :last, :email, :password, :adress, :city, :post, :country);';
+	$sql_query = 'INSERT INTO `users` (`user_id`, `user_firstname`, `user_lastname`, `user_email`, `user_password`, `user_adress`, `user_city`, `user_postcode`, `user_country`) VALUES (NULL, :first, :last, :email, :password, NULL, NULL, NULL, NULL);';
 
 	$insertRegister = new getDBData($conn, $sql_query);
 
-	$result = $insertRegister -> getData(array(':first'=>"$firstname" , ':last'=>"$lastname", ':email' => "$email", ':password' => "$password_hashed", ':adress' => "$adress", ':city' => "$city", ':post' => "$postcode", 'country' => "$country"));
+	$result = $insertRegister -> getData(array(':first'=>"$firstname" , ':last'=>"$lastname", ':email' => "$email", ':password' => "$password_hashed"));
 
 	echo "Registered successfully!";
 	header('Location: ' . $root . 'ucp/login.php');

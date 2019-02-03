@@ -19,7 +19,7 @@ body {
 /* Header */
 .headerwrapper {
   font-family: "Laila", serif;
-  background-color: #0099cc;
+  background-color: #004d66;
   color: #e6e6e6;
   padding: 5px 0;
   position: fixed;
@@ -73,7 +73,7 @@ body {
   display: none;
   position: absolute;
   z-index: 6;
-  background-color: #0099cc;
+  background-color: #004d66;
   color: #e6e6e6;
 }
 .dropdown_user a {
@@ -88,7 +88,7 @@ body {
 }
 
 .featured_banner {
-  background: #0099cc;
+  background: #004d66;
   color: #e6e6e6;
   display: flex;
   flex-wrap: wrap;
@@ -134,7 +134,11 @@ form label {
   margin-top: 10px;
   display: block;
 }
+form .error {
+  color: red;
+}
 form input {
+  outline: none;
   display: block;
   border-radius: 4px;
   width: 200px;
@@ -161,6 +165,7 @@ form textarea {
   height: 200px;
 }
 form button {
+  outline: none;
   margin-top: 20px;
   border-radius: 8px;
   padding: 4px 10px;
@@ -175,7 +180,7 @@ form button:active {
 
 .addproduct_container {
   min-width: 300px;
-  background: #0099cc;
+  background: #004d66;
   box-sizing: border-box;
   border-radius: 16px;
   padding: 16px;
@@ -196,7 +201,7 @@ form button:active {
 .form_container {
   width: 700px;
   min-width: 300px;
-  background: #0099cc;
+  background: #004d66;
   box-sizing: border-box;
   border-radius: 16px;
   padding: 16px;
@@ -240,7 +245,7 @@ form button:active {
 
 /* filters */
 .products_filter {
-  background: #0099cc;
+  background: #004d66;
   color: #e6e6e6;
   position: sticky;
   top: 100px;
@@ -270,7 +275,7 @@ form button:active {
   cursor: pointer;
 }
 .products_filter .filter:hover {
-  background: #086f91;
+  background: #032530;
 }
 
 .active {
@@ -312,7 +317,7 @@ form button:active {
 }
 .product_info .description p {
   width: 100%;
-  border: 2px solid #cc0099;
+  border: 2px solid #5c0045;
   border-radius: 8px;
   padding: 8px;
 }
@@ -320,7 +325,7 @@ form button:active {
   padding-left: 16px;
   width: 100%;
   height: 50px;
-  background: #cc0099;
+  background: #5c0045;
   color: #e6e6e6;
   width: 100%;
   border-radius: 8px;
@@ -344,7 +349,7 @@ form button:active {
 }
 
 .product_img {
-  border: 1px solid #cc0099;
+  border: 1px solid #5c0045;
   position: relative;
   width: 100%;
   background-position: center;
@@ -363,7 +368,7 @@ form button:active {
   border: 1px solid #99cc00;
   border-radius: 8px;
   width: 300px;
-  background: #0099cc;
+  background: #004d66;
   color: #e6e6e6;
   transition: transform 0.5s;
 }
@@ -377,7 +382,7 @@ form button:active {
   height: 300px;
   object-fit: cover;
   cursor: pointer;
-  border-bottom: 1px solid #0099cc;
+  border-bottom: 1px solid #004d66;
 }
 .product_card .details {
   display: flex;

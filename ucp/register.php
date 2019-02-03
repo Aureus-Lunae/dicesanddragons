@@ -205,15 +205,6 @@
             <label for="repeat_password">Repeat password*:</label>
             <input type="password" id="repeat_password" name="repeat_password">
 
-            <label for="adress">Adress*:</label>
-            <input type="text" id="adress" name="adress" maxlength="20">
-            <label for="postcode">Post code*:</label>
-            <input type="text" id="postcode" name="postcode" maxlength="8">
-            <label for="city">City*:</label>
-            <input type="text" id="city" name="city" maxlength="20">
-            <label for="Country">County*:</label>
-            <input type="text" id="country" name="country" maxlength="40">
-
             <input type="checkbox" name="tos" value="tos" class="tos" required>
             <label for="tos" class="tos">I have read and agreed to the <span id="modal_button" class="modal_button">Terms of Service.</span></label><br />
             

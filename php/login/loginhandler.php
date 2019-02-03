@@ -28,14 +28,14 @@
 
 		if (password_verify($password, $hash)) {
 
-			$sql_query = 'SELECT user_firstname, user_lastname, access FROM users WHERE user_email = :email';
+			$sql_query = 'SELECT user_id, user_firstname, user_lastname, access FROM users WHERE user_email = :email';
 			$loginUser = new getDBData($conn, $sql_query);
 			$userResults = $loginUser -> getData(array('email'=> "$email"));
 
 			$user = $userResults->fetch(PDO::FETCH_ASSOC);
 			$username = $user['user_firstname'] . ' ' . $user['user_lastname'];
 
-			$_SESSION['user'] = new user($username, $user['access']);
+			$_SESSION['user'] = new user($user['user_id'], $username, $user['access']);
 			$_SESSION['loggedin'] = 1;
 			header('Location: ' . $root . 'index.php');
 

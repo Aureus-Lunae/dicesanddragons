@@ -22,7 +22,12 @@ form {
 		display: block;
 	}
 
+	.error {
+		color: red;
+	}
+
 	input {
+		outline: none;
 		display: block;
 		border-radius: 4px;
 		width: 200px;
@@ -55,6 +60,7 @@ form {
 	}
 
 	button {
+		outline: none;
 		margin-top: 20px;
 		border-radius: 8px;
 		padding: 4px 10px;

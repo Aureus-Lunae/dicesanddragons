@@ -35,10 +35,12 @@ class getDBData {
  * User Classes
  */
 class user {
+	private $user_id;
 	private $username;
 	private $access;
 
-	public function __construct($username, $access) {
+	public function __construct($user_id, $username, $access) {
+		$this -> user_id = $user_id;	
 		$this -> username = $username;
 		$this -> access = $access;
 	}
@@ -51,12 +53,14 @@ class user {
 		}
 	}
 
-	public function showUsername(){
-		return $this -> username;
+	public function changePassword($conn, $hash) {
+		$updatePassword = $conn -> prepare('UPDATE users SET user_password = :hash WHERE user_id = ' . $this -> user_id);
+		$updatePassword -> execute(array(':hash'=> $hash));
+		$_SESSION['success'] = 30;
 	}
 
-	public function checkAccess() {
-			return $this -> access;
+	public function __get( $property ) {
+		return $this->$property;
 	}
 }
 
