@@ -28,9 +28,7 @@
   <div class="content_wrapper">
 
   <?php
-    var_dump($_SESSION['cart']);
-    echo '<br />Quanity: ' . $_SESSION['cart'] -> totalQuanity . '<br />Total: €' . $_SESSION['cart'] -> subTotalPrice . '<br /><br />';
-
+    require('php/shoppingcarthandler.php')
   ?>  
 
 
