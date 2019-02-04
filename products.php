@@ -47,6 +47,7 @@ require('php/classes.php');
 
     <div class="products_wrapper" id="product_output">
    	  <?php
+        var_dump($_SESSION['cart']);
    	  	require 'php/productscards.php';
    	  ?>
 
@@ -55,6 +56,7 @@ require('php/classes.php');
 	</div>
 
   <script type="text/javascript" src="js/pagefilters.js"></script>
+  <script type="text/javascript" src="js/cartupdater.js"></script>
 </body>
 
 </html>

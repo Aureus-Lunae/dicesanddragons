@@ -36,7 +36,7 @@ require('php/classes.php');
 
     </div>
 
-    <script type="text/javascript" src="js/pagefilters.js"></script>
+  <script type="text/javascript" src="js/cartupdater.js"></script>
 </body>
 
 </html>

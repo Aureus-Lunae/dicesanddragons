@@ -7,6 +7,10 @@ if (!isset( $_SESSION['loggedin'] )) {
 	$_SESSION['loggedin'] = 0;
 }
 
+if (!isset( $_SESSION['cart'] )) {
+	$_SESSION['cart'] = new cart();
+}
+
 $root=$_SERVER['HTTP_HOST'];
 $root='http://'.$root.'/diceandragons/';
 
@@ -122,7 +126,7 @@ class productCard {
    	  	<div class="details">
    	  		<h1>' . $this -> cardName . '</h1>
    	  	</div>
-   	  	<div class="price">€' . $this -> cardPrice . '</div>
+   	  	<div class="price" onclick="addToCart(`' . $this -> cardId . '`,`' . $this -> cardName . '`,`' . $this -> cardPrice . '`,`' . $this -> cardCat . '/' . $this -> cardPhoto . '`,`/diceandragons/php/carthandler.php`)">€' . $this -> cardPrice . '</div>
    	  	</div>';
 	}
 }
