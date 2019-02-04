@@ -25,7 +25,11 @@ require('php/classes.php');
 </head>
 
 <body>
-
+  <div id="addToClass" class="modal">
+    <div class="product_confirmation">
+      Product added to cart!
+    </div>
+  </div>
   <?php require_once('html/header.php'); ?>
   <div class="content_wrapper">
 

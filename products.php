@@ -21,7 +21,11 @@ require('php/classes.php');
 </head>
 
 <body>
-
+  <div id="addToClass" class="modal">
+    <div class="product_confirmation">
+      Product added to cart!
+    </div>
+  </div>
 	<?php require_once('html/header.php'); ?>
 	<div class="content_wrapper">
 		<div class="text_wrapper">
@@ -49,7 +53,6 @@ require('php/classes.php');
 
     <div class="products_wrapper" id="product_output">
    	  <?php
-        var_dump($_SESSION['cart']);
    	  	require 'php/productscards.php';
    	  ?>
 

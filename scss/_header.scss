@@ -98,10 +98,6 @@
 	}
 }
 
-
-
-
-
 .userbutton:hover .dropdown_user {
 	display: block;
 }
@@ -124,4 +120,8 @@
 			background: $tertiary-color;
 		}
 	}
+}
+
+#cartqnt {
+	font-weight: 700;
 }

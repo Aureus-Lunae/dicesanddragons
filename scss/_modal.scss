@@ -8,12 +8,25 @@
 	height: 100%;
 	overflow: auto;
 	background: rgba(0, 0, 0, 0.1);
+	justify-content: center;
+	align-items: center;
+}
+
+.product_confirmation {
+	display: flex;
+	font-weight: 700;
+	justify-content: center;
+	background: $secondary-color;
+	color: $secondary-text-color;
+	border: 1px solid $secondary-color-highlight;
+	border-radius: 16px;
+	padding: 30px;
 }
 
 .modal_content {
 	background: $primary-color;
 	padding: 10px;
-	margin: 130px auto 20px auto;
+	margin: 140px auto 20px auto;
 	border: 1px solid #000;
 	width: 80%;
 

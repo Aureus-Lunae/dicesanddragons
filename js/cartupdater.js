@@ -1,7 +1,11 @@
+const modal = document.getElementById(`addToClass`);
+console.log(modal);
+
 const addToCart = (id, name, price, img, url) => {
 	let compiledUrl =
 		`${url}?id=${id}&name=${name}&price=${price}&img=${img}&qnt=1&add=1`;
 	updateCart(compiledUrl);
+	modal.style.display = `flex`;
 }
 
 const updateCart = (url) => {
@@ -21,4 +25,10 @@ const updateCart = (url) => {
 const showCart = (data) => {
 	let cartQnt = document.getElementById(`cartqnt`);
 	cartQnt.innerHTML = data[`response`];
+}
+
+window.onclick = function(event) {
+	if (event.target == modal) {
+		modal.style.display = `none`;
+	}
 }
