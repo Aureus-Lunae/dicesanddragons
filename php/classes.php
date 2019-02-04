@@ -79,7 +79,6 @@ class user {
 		}
 	}
 
-
 	public function __get( $property ) {
 		return $this->$property;
 	}
