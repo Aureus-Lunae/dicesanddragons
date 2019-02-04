@@ -139,25 +139,43 @@ class cart {
 	}
 
 	public function addToCart($id, $name, $img, $price, $quantity){
-		$productArray = ['id' => $id, 'name' => $name, 'img' => $img, 'price' => $price, 'quantity' => $quantity];
+		$productArray = ['id' => $id, 'name' => $name, 'img' => '/img/' . $img, 'price' => $price, 'quantity' => $quantity];
 		$isInCart = 0;
-		$this -> totalQuanity += $productArray['quantity'];
-		$this -> subTotalPrice += $productArray['quantity'] * $productArray['price'];
 
 		foreach ($this ->cartproducts as $key => $value){
 			if ($value['id'] == $productArray['id']){
-				$this -> cartproducts[$key]['quantity'] += $productArray['quantity'];
+				if (($productArray['quantity'] + $value['quantity'] > 99)) {
+					$this -> cartproducts[$key]['quantity'] = 99;
+					$productArray['quantity'] -= $value['quantity'] ;
+				} else {
+					$this -> cartproducts[$key]['quantity'] += $productArray['quantity'];
+				}
 				$isInCart = 1;
 			}
 		}
 
+		$this -> totalQuanity += $productArray['quantity'];
+		$this -> subTotalPrice += $productArray['quantity'] * $productArray['price'];
 		if ($isInCart == 0){
 			$this -> cartproducts[] = $productArray;
 		}
 	}
 
-	public function removeFromCart($id){
+	public function removeFromCart($id, $quantity){
+		$productArray = ['id' => $id, 'quantity' => $quantity];
+		foreach ($this ->cartproducts as $key => $value){
+			if ($value['id'] == $productArray['id']){
+				$this -> cartproducts[$key]['quantity'] -= $productArray['quantity'];
+				$this -> totalQuanity -= $productArray['quantity'];
+				$this -> subTotalPrice -= $productArray['quantity'] * $value['price'];
 
+				if ($this -> cartproducts[$key]['quantity'] <= 0) {
+					$this -> totalQuanity -= $this -> cartproducts[$key]['quantity'];
+					$this -> subTotalPrice -= $this -> cartproducts[$key]['quantity'] * $value['price'];
+					unset( $this -> cartproducts[$key] );
+				}
+			}
+		}
 	}
 	
 	public function __get( $property ) {

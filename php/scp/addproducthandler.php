@@ -33,9 +33,9 @@ if (isset($_POST)){
 	echo $newPhoto;
 	echo $targetFile;
 
-	//Set filename
+	//SeTt filename
 	$uploadOK = 1;
-	$imageFileType = strtolower(pathinfo($targetFile,PATHINFO_EXTENSION));
+	$imageFileype = strtolower(pathinfo($targetFile,PATHINFO_EXTENSION));
 
 	//Check if the image is really a photo
 	$check = getimagesize($_FILES['product_photo']['tmp_name']);
