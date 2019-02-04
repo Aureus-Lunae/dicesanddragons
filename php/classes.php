@@ -129,14 +129,20 @@ class productCard {
 
 class cart {
 	private $cartproducts;
+	private $totalQuanity;
+	private $subTotalPrice;
 
 	public function __construct() {
 		$this -> cartproducts = array();
+		$this -> totalQuanity = 0;
+		$this -> subTotalPrice = 0;
 	}
 
 	public function addToCart($id, $name, $img, $price, $quantity){
 		$productArray = ['id' => $id, 'name' => $name, 'img' => $img, 'price' => $price, 'quantity' => $quantity];
 		$isInCart = 0;
+		$this -> totalQuanity += $productArray['quantity'];
+		$this -> subTotalPrice += $productArray['quantity'] * $productArray['price'];
 
 		foreach ($this ->cartproducts as $key => $value){
 			if ($value['id'] == $productArray['id']){

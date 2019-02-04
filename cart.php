@@ -28,15 +28,16 @@
     $testcart = new cart();
     $testcart -> addToCart(1001, 'Gemini Purple-teal', '7dice/geminipurpleteal.png', 9.98, 1);
     var_dump($testcart);
-    echo '<br /><br />';
+    echo '<br />Quanity: ' . $testcart -> totalQuanity . '<br />Total: €' . $testcart -> subTotalPrice . '<br /><br />';
     $testcart -> addToCart(1001, 'Gemini Purple-teal', '7dice/geminipurpleteal.png', 9.98, 5);
     var_dump($testcart);
-    echo '<br /><br />';
+    echo '<br />Quanity: ' . $testcart -> totalQuanity . '<br />Total: €' . $testcart -> subTotalPrice . '<br /><br />';
     $testcart -> addToCart(1002, 'Pink Ghostly Glow in the Dark', '7dice/geminipurpleteal.png', 11.99, 1);
     var_dump($testcart);
-    echo '<br /><br />';
+    echo '<br />Quanity: ' . $testcart -> totalQuanity . '<br />Total: €' . $testcart -> subTotalPrice . '<br /><br />';
     $testcart -> addToCart(1001, 'Gemini Purple-teal', '7dice/geminipurpleteal.png', 9.98, 5);
     var_dump($testcart);
+    echo '<br />Quanity: ' . $testcart -> totalQuanity . '<br />Total: €' . $testcart -> subTotalPrice . '<br /><br />';
   ?>  
 
   </div>
