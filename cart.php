@@ -17,6 +17,9 @@
    rel="stylesheet">
   <link href="/diceandragons/css/style.css" rel="stylesheet" type="text/css"
    media="all" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+
 </head>
 
 <body>
@@ -25,30 +28,8 @@
   <div class="content_wrapper">
 
   <?php
-    $testcart = new cart();
-    $testcart -> addToCart(1001, 'Gemini Purple-teal', '7dice/geminipurpleteal.png', 9.98, 1);
-    var_dump($testcart);
-
-    echo '<br />Quanity: ' . $testcart -> totalQuanity . '<br />Total: €' . $testcart -> subTotalPrice . '<br /><br />';
-    $testcart -> addToCart(1001, 'Gemini Purple-teal', '7dice/geminipurpleteal.png', 9.98, 5);
-    var_dump($testcart);
-
-    echo '<br />Quanity: ' . $testcart -> totalQuanity . '<br />Total: €' . $testcart -> subTotalPrice . '<br /><br />';
-    $testcart -> addToCart(1002, 'Pink Ghostly Glow in the Dark', '7dice/geminipurpleteal.png', 11.99, 1);
-    var_dump($testcart);
-
-    echo '<br />Quanity: ' . $testcart -> totalQuanity . '<br />Total: €' . $testcart -> subTotalPrice . '<br /><br />';
-    $testcart -> addToCart(1001, 'Gemini Purple-teal', '7dice/geminipurpleteal.png', 9.98, 8);
-    var_dump($testcart);
-
-    echo '<br />Quanity: ' . $testcart -> totalQuanity . '<br />Total: €' . $testcart -> subTotalPrice . '<br /><br />';
-    $testcart -> removeFromCart(1001, 8);
-    var_dump($testcart);
-    echo '<br />Removed Quanity: ' . $testcart -> totalQuanity . '<br />Total: €' . $testcart -> subTotalPrice . '<br /><br />';
-
-    $testcart -> removeFromCart(1001, 100);
-    var_dump($testcart);
-    echo '<br />Quanity: ' . $testcart -> totalQuanity . '<br />Total: €' . $testcart -> subTotalPrice . '<br /><br />';
+    var_dump($_SESSION['cart']);
+    echo '<br />Quanity: ' . $_SESSION['cart'] -> totalQuanity . '<br />Total: €' . $_SESSION['cart'] -> subTotalPrice . '<br /><br />';
 
   ?>  
 

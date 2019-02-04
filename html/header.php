@@ -2,10 +2,8 @@
 	<div class="logo">
 		<img src="/diceandragons/img/logo.png" alt="Dices and dragons" />
 	</div>
-	<div class=navbar>
+	<div class="navbarheader">
 		<ul class="menu">
-			<li><a href="/diceandragons/">Home</a></li>
-			<li><a href="/diceandragons/products.php">Products</a></li>
       <?php 
         if ($_SESSION['loggedin'] == 0) {
 				echo '<li><a href="/diceandragons/ucp/login.php">Login</a></li>';
@@ -23,5 +21,14 @@
         }
       ?>
 		</ul>
+	</div>
+	<div class="navbar2">
+		<div class="menu">
+			<a href="/diceandragons/"><i class="fas fa-home"></i> Home</a>
+			<a href="/diceandragons/products.php"><i class="fas fa-dice-d20"></i> dice</a>
+		</div>
+		<div class="cart">
+			<a href="/diceandragons/cart.php"><i class="fas fa-shopping-cart"></i> <span id="cartqnt"><?php echo $_SESSION['cart'] -> totalQuanity; ?></span></a>
+		</div>
 	</div>
 </header>

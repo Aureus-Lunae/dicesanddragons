@@ -12,5 +12,5 @@
 		$_SESSION['cart'] -> addToCart($id, $name, $img, $price, $qnt);
 	}
 
-
+	echo $_SESSION['cart'] -> totalQuanity;
 ?>

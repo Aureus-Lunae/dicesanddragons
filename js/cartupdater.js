@@ -19,6 +19,6 @@ const updateCart = (url) => {
 }
 
 const showCart = (data) => {
-	//let filterResults = document.getElementById(`cart`);
-	//filterResults.innerHTML = data[`response`];
+	let cartQnt = document.getElementById(`cartqnt`);
+	cartQnt.innerHTML = data[`response`];
 }

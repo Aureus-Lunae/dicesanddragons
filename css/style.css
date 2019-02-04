@@ -11,7 +11,7 @@ body {
 }
 
 .content_wrapper {
-  margin-top: 120px;
+  margin-top: 140px;
   min-height: calc(100vh - 120px);
   box-sizing: border-box;
 }
@@ -19,8 +19,8 @@ body {
 /* Header */
 .headerwrapper {
   font-family: "Laila", serif;
-  background-color: #004d66;
-  color: #e6e6e6;
+  background-color: #f2f2f2;
+  color: #1f1f1f;
   padding: 5px 0;
   position: fixed;
   top: 0;
@@ -29,40 +29,79 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
+  align-content: flex-end;
 }
 .headerwrapper .logo {
   width: 320px;
   margin-left: 10px;
-  float: left;
   display: block;
 }
 .headerwrapper .logo img {
   width: 100%;
 }
-.headerwrapper .navbar {
+.headerwrapper .navbarheader {
   display: block;
   height: 100%;
 }
-.headerwrapper .navbar .menu {
+.headerwrapper .navbarheader .menu {
   margin: auto 0;
   padding: 0;
   list-style: none;
   clear: none;
   max-height: none;
 }
-.headerwrapper .navbar .menu li {
+.headerwrapper .navbarheader .menu li {
   display: inline-block;
   border-left: 1px solid #99cc00;
 }
-.headerwrapper .navbar .menu li a {
+.headerwrapper .navbarheader .menu li a {
   padding: 16px 24px;
+  display: block;
+  text-decoration: none;
+  color: #1f1f1f;
+}
+.headerwrapper .navbarheader .menu li a:hover {
+  text-decoration: underline;
+  background: #004d66;
+  color: #e6e6e6;
+}
+
+.navbar2 {
+  font-family: "Laila", serif;
+  background-color: #004d66;
+  color: #e6e6e6;
+  padding: 5px 0;
+  position: fixed;
+  top: 100px;
+  z-index: 5;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.navbar2 a {
+  padding: 0 24px;
   display: block;
   text-decoration: none;
   color: #e6e6e6;
 }
-.headerwrapper .navbar .menu li a:hover {
+.navbar2 a:hover {
   text-decoration: underline;
   background: #99cc00;
+}
+.navbar2 .cart {
+  border-left: 1px solid #99cc00;
+  margin-right: 30px;
+}
+.navbar2 .menu {
+  list-style: none;
+  clear: none;
+  max-height: none;
+  margin-left: 30px;
+}
+.navbar2 .menu a {
+  display: inline-block;
+  border-left: 1px solid #99cc00;
 }
 
 .userbutton:hover .dropdown_user {
@@ -80,7 +119,7 @@ body {
   padding: 16px 24px;
   display: block;
   text-decoration: none;
-  color: #e6e6e6;
+  color: #e6e6e6 !important;
 }
 .dropdown_user a:hover {
   text-decoration: underline;
@@ -109,7 +148,7 @@ body {
 .herowrapper {
   margin-top: -15px;
   margin-bottom: 25px;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 120px);
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -249,7 +288,7 @@ form button:active {
   background: #004d66;
   color: #e6e6e6;
   position: sticky;
-  top: 100px;
+  top: 128px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
