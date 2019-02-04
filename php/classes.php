@@ -127,5 +127,35 @@ class productCard {
 	}
 }
 
+class cart {
+	private $cartproducts;
 
+	public function __construct() {
+		$this -> cartproducts = array();
+	}
+
+	public function addToCart($id, $name, $img, $price, $quantity){
+		$productArray = ['id' => $id, 'name' => $name, 'img' => $img, 'price' => $price, 'quantity' => $quantity];
+		$isInCart = 0;
+
+		foreach ($this ->cartproducts as $key => $value){
+			if ($value['id'] == $productArray['id']){
+				$this -> cartproducts[$key]['quantity'] += $productArray['quantity'];
+				$isInCart = 1;
+			}
+		}
+
+		if ($isInCart == 0){
+			$this -> cartproducts[] = $productArray;
+		}
+	}
+
+	public function removeFromCart($id){
+
+	}
+	
+	public function __get( $property ) {
+		return $this->$property;
+	}
+}
 ?>
