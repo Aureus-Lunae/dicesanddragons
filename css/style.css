@@ -1,9 +1,15 @@
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
-  min-height: 100%;
+  height: 100%;
   background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
 }
 
 .debug {
@@ -11,8 +17,8 @@ body {
 }
 
 .content_wrapper {
+  flex: 1 0 auto;
   margin-top: 150px;
-  min-height: calc(100vh - 120px);
   box-sizing: border-box;
 }
 
@@ -315,8 +321,9 @@ form button:active {
   justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
-  margin-left: 48px;
-  width: calc(100% - 96px);
+  margin: 0 auto;
+  width: 80%;
+  min-width: 400px;
 }
 
 /* filters */
@@ -405,6 +412,7 @@ form button:active {
   font-size: 20px;
 }
 .product_info .description .add {
+  display: inline-block;
   padding: 16px;
   color: #e6e6e6;
   font-size: 20px;
@@ -632,6 +640,39 @@ form button:active {
   object-fit: cover;
   border-radius: 8px;
   border: 1px solid #66004d;
+}
+
+.footer_wrapper {
+  width: 100%;
+  background: #004d66;
+  color: #e6e6e6;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+.footer_wrapper .credits {
+  width: 100%;
+}
+.footer_wrapper .credits .credits_content {
+  width: 80%;
+  margin: 5px auto 0 auto;
+  padding: 10px;
+  border-top: 3px solid #66004d;
+  text-align: center;
+}
+.footer_wrapper .payment_options {
+  border-left: 3px solid #66004d;
+  border-right: 3px solid #66004d;
+  padding: 10px;
+  font-size: 24px;
+  width: 250px;
+  display: flex;
+  justify-content: center;
+}
+.footer_wrapper .payment_options .fab {
+  font-size: 96px;
 }
 
 /*# sourceMappingURL=style.css.map */

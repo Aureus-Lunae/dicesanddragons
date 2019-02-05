@@ -59,7 +59,7 @@ require('php/classes.php');
     </div>
     
 	</div>
-
+  <?php require_once('html/footer.html'); ?>
   <script type="text/javascript" src="js/pagefilters.js"></script>
   <script type="text/javascript" src="js/cartupdater.js"></script>
 </body>

@@ -217,7 +217,6 @@
     </div>
 
 	</div>
-
 <script type="text/javascript" src="../js/modal.js"></script>
 </body>
 

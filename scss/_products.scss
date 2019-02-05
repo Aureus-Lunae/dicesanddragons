@@ -18,8 +18,9 @@
 	justify-content: center;
 	align-items: flex-start;
 	align-content: flex-start;
-	margin-left: 48px;
-	width: calc(100% - 96px);
+	margin: 0 auto;
+	width: 80%;
+	min-width: 400px;
 }
 
 /* filters */
@@ -118,6 +119,7 @@
 		}
 
 		.add {
+			display: inline-block;
 			padding: 16px;
 			color: $secondary_text_color;
 			font-size: 20px;

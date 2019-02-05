@@ -78,7 +78,6 @@ $_SESSION['user']->requiredAccess(1);
       </div>
     </div>
   </div>
-
 </body>
 
 </html>

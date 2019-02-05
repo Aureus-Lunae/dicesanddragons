@@ -66,7 +66,6 @@ require('../php/classes.php');
       </div>
     </div>
   </div>
-
 </body>
 
 </html>

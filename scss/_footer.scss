@@ -1,0 +1,36 @@
+.footer_wrapper {
+	width: 100%;
+	background: $secondary-color;
+	color: $secondary_text_color;
+	flex-shrink: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 20px;
+
+	.credits {
+		width: 100%;
+
+		.credits_content {
+			width: 80%;
+			margin: 5px auto 0 auto;
+			padding: 10px;
+			border-top: 3px solid $quaternary-color;
+			text-align: center;
+		}
+	}
+
+	.payment_options {
+		border-left: 3px solid $quaternary-color;
+		border-right: 3px solid $quaternary-color;
+		padding: 10px;
+		font-size: 24px;
+		width: 250px;
+		display: flex;
+		justify-content: center;
+
+		.fab {
+			font-size: 96px;
+		}
+	}
+}
