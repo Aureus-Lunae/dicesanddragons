@@ -28,7 +28,7 @@
 			<a href="/diceandragons/products.php"><i class="fas fa-dice-d20"></i> dice</a>
 		</div>
 		<div class="cart">
-			<a href="/diceandragons/cart.php"><i class="fas fa-shopping-cart"></i> <span id="cartqnt"><?php echo $_SESSION['cart'] -> totalQuanity; ?></span></a>
+			<a href="/diceandragons/cart.php"><i class="fas fa-shopping-cart"></i> <span id="cartqnt"><?php echo $_SESSION['cart'] -> totalQuantity; ?></span></a>
 		</div>
 	</div>
 </header>

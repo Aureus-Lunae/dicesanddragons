@@ -138,7 +138,7 @@ class cart {
 
 	public function __construct() {
 		$this -> cartproducts = array();
-		$this -> totalQuanity = 0;
+		$this -> totalQuantity = 0;
 		$this -> subTotalPrice = 0;
 	}
 
@@ -158,11 +158,12 @@ class cart {
 			}
 		}
 
-		$this -> totalQuanity += $productArray['quantity'];
+		$this -> totalQuantity += $productArray['quantity'];
 		$this -> subTotalPrice += $productArray['quantity'] * $productArray['price'];
 		if ($isInCart == 0){
 			$this -> cartproducts[] = $productArray;
 		}
+		$this -> subTotalPrice = round($this -> subTotalPrice, 2);
 	}
 
 	public function removeFromCart($id, $quantity){
@@ -170,14 +171,15 @@ class cart {
 		foreach ($this ->cartproducts as $key => $value){
 			if ($value['id'] == $productArray['id']){
 				$this -> cartproducts[$key]['quantity'] -= $productArray['quantity'];
-				$this -> totalQuanity -= $productArray['quantity'];
+				$this -> totalQuantity -= $productArray['quantity'];
 				$this -> subTotalPrice -= $productArray['quantity'] * $value['price'];
 
 				if ($this -> cartproducts[$key]['quantity'] <= 0) {
-					$this -> totalQuanity -= $this -> cartproducts[$key]['quantity'];
+					$this -> totalQuantity -= $this -> cartproducts[$key]['quantity'];
 					$this -> subTotalPrice -= $this -> cartproducts[$key]['quantity'] * $value['price'];
 					unset( $this -> cartproducts[$key] );
 				}
+				$this -> subTotalPrice = round($this -> subTotalPrice, 2);
 			}
 		}
 	}

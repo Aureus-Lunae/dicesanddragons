@@ -27,14 +27,18 @@
 
   <div class="content_wrapper">
 
-  <?php
-    require('php/shoppingcarthandler.php')
-  ?>  
-
-
+    <div class="cart_items">
+      <h1>My Basket</h1>
+      <div id="items">
+      <?php
+        require('php/shoppingcartoutput.php');
+      ?>  
+      </div>
+    </div>
 
   </div>
 
+  <script type="text/javascript" src="js/cartupdater.js"></script>
 </body>
 
 </html>

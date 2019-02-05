@@ -13,7 +13,7 @@ body {
 }
 
 .content_wrapper {
-	margin-top: 140px;
+	margin-top: 150px;
 	min-height: calc(100vh - 120px);
 	box-sizing: border-box;
 }
@@ -29,3 +29,5 @@ body {
 @import 'products';
 
 @import 'modal';
+
+@import 'cart';
