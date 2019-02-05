@@ -35,21 +35,26 @@
 	$photo = $product['product_photo'];
 	$desc = $product['product_desc'];
 
-	echo '<div class="product_info">
-	 		<h1>' . $name . ' - ' . $cat . '</h1>
-	 		 <div class="img_container">
-	 		 <div class="product_img" style="background-image: url(/diceandragons/img/' . $cat .'/' . $photo . ')" >
-          </div>
-        </div>
-
-        <div class="description">
-          <p>' . $desc . '</p>
-
-          <div class="shop">
-            <div class="price">€' . $price . '</div>
-            <div class="add"  onclick="addToCart(`' . $product_id . '`,`' . $name . '`,`' . $price . '`,`' . $cat . '/' . $photo . '`,`/diceandragons/php/carthandler.php`)">Add to cart</div>
-          </div>
-        </div>
-      </div>';
+	echo '
+	<div class="product_info">
+	 	<div class="img_container">
+	 	 	<div class="product_img" style="background-image: url(/diceandragons/img/' . $cat .'/' . $photo . ')" >
+      </div>
+     </div>
+    <div class="description">
+    	<div>
+    		<div class="cat">' . $cat . ' set</div>
+    		<h1>' . $name . '</h1>
+    		<div class="price_id_wrapper">
+    			<div class="price">€' . $price . '</div>
+    			<div class="product_id">Item #' . $product_id . '</div>
+    		</div>
+    		<p>' . $desc . '</p>
+    	</div>
+      	
+     <div class="add"  onclick="addToCart(`' . $product_id . '`,`' . $name . '`,`' . $price . '`,`' . $cat . '/' . $photo . '`,`/diceandragons/php/carthandler.php`)">Add to cart
+     </div>
+    </div>
+  </div>';
 
 ?>

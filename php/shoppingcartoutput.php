@@ -15,7 +15,7 @@
    	<img src="/diceandragons' . $img . '" alt="' . $name . '" /><div class="product_data">
    	<div class="name">' . $name . '</div>
    	<div class="price">€' . $price . ' ea.</div>
-   	<div class="id">Item #: ' . $id . '</div></div>
+   	<div class="id">Item #' . $id . '</div></div>
    	<div class="quantity">quantity: ' . $quantity . '</div>
    	<div class="subtotal">Subtotal: €' . $subtotal . '</div>
    	<div class="remove" onclick="deleteFromCart(`' . $id . '`, `/diceandragons/php/carthandler.php`)"><i class="fas fa-trash-alt"></i></div>

@@ -34,6 +34,12 @@
         require('php/shoppingcartoutput.php');
       ?>  
       </div>
+
+      <div class="checkout">
+        <div class="empty"></div>
+        <button class="payment">Payout</button>
+      </div>
+
     </div>
 
   </div>

@@ -34,6 +34,39 @@
 
 	}
 
+	.checkout {
+		margin-top: 16px;
+		padding: 10px;
+		display: flex;
+		width: 100%;
+
+		.empty {
+			width: calc(110px + 65%);
+		}
+
+		.payment {
+			font-size: 24px;
+			font-weight: 700;
+			display: block;
+			width: 25%;
+			background: $tertiary-color;
+			color: $secondary_text_color;
+			border-radius: 12px;
+			border: 1px solid $quaternary-color;
+			padding: 20px;
+			text-align: center;
+			outline: none;
+			pointer: button;
+
+			&:active {
+				position: relative;
+				top: 2px;
+				left: 2px;
+			}
+		}
+
+	}
+
 	.product {
 		padding: 10px;
 		display: flex;

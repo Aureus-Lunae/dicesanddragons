@@ -5,7 +5,7 @@ form {
 
 	a {
 		text-decoration: none;
-		color: $tertairy_text_color;
+		color: $success_text_color;
 
 		&:hover {
 			text-decoration: underline;
@@ -23,7 +23,21 @@ form {
 	}
 
 	.error {
-		color: red;
+		width: 200px;
+		box-sizing: border-box;
+		margin-top: 5px;
+		border-radius: 8px;
+		padding: 8px;
+		background: $warning-color;
+		color: $error_text_color;
+	}
+
+	.success {
+		width: 200px;
+		box-sizing: border-box;
+		margin-top: 5px;
+		padding: 8px;
+		color: $success_text_color;
 	}
 
 	select,
@@ -64,9 +78,10 @@ form {
 		outline: none;
 		margin-top: 20px;
 		border-radius: 8px;
-		padding: 4px 10px;
+		padding: 5px 20px;
 		background: $tertiary-color;
-		color: $secondary_text_color;
+		color: $tertairy_text_color;
+		cursor: pointer;
 
 		&:active {
 			position: relative;

@@ -41,10 +41,10 @@ require('../php/classes.php');
             <?php 
               if ($_SESSION['failcount'] >0) {
                 if ($_SESSION['failcount'] > 4) {
-                  echo '<div>Max attempts reached.</div>'; 
+                  echo '<div class="error">Max attempts reached.</div>'; 
                 } else {
                   $attemptsRemaining = 5 - $_SESSION['failcount'];
-                  echo '<div>Username of Password is incorrect! You have '. $attemptsRemaining . ' attempts remaining</div>'; 
+                  echo '<div class="error">Username of Password is incorrect! You have '. $attemptsRemaining . ' attempts remaining</div>'; 
                 }  
               }
             ?>

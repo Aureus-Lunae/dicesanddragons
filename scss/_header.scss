@@ -34,6 +34,51 @@
 			clear: none;
 			max-height: none;
 
+			.userbutton {
+				padding: 16px 0px;
+				text-align: center;
+				width: 200px;
+				position: relative;
+				display: inline-block;
+				text-decoration: none;
+				color: $primary-text-color;
+				cursor: pointer;
+
+				&:hover {
+					background-color: $secondary-color;
+					color: $secondary_text_color;
+				}
+			}
+
+			.userbutton:hover .dropdown_user {
+				display: block;
+			}
+
+			.dropdown_user {
+				display: none;
+				position: absolute;
+				text-align: left;
+				width: 200px;
+				top: 57px;
+				left: 0;
+				z-index: 6;
+				background-color: $secondary-color;
+				color: $secondary_text_color;
+
+				a {
+					padding: 16px 24px;
+					display: block;
+					text-decoration: none;
+					color: $secondary_text_color !important;
+
+					&:hover {
+						text-decoration: underline;
+						background: $tertiary-color;
+						color: $tertairy_text_color !important;
+					}
+				}
+			}
+
 			li {
 				display: inline-block;
 				border-left: 1px solid $tertiary-color;
@@ -77,6 +122,7 @@
 		&:hover {
 			text-decoration: underline;
 			background: $tertiary-color;
+			color: $tertairy_text_color;
 		}
 	}
 
@@ -98,29 +144,7 @@
 	}
 }
 
-.userbutton:hover .dropdown_user {
-	display: block;
-}
 
-.dropdown_user {
-	display: none;
-	position: absolute;
-	z-index: 6;
-	background-color: $secondary-color;
-	color: $secondary_text_color;
-
-	a {
-		padding: 16px 24px;
-		display: block;
-		text-decoration: none;
-		color: $secondary_text_color !important;
-
-		&:hover {
-			text-decoration: underline;
-			background: $tertiary-color;
-		}
-	}
-}
 
 #cartqnt {
 	font-weight: 700;

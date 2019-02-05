@@ -8,7 +8,7 @@
         if ($_SESSION['loggedin'] == 0) {
 				echo '<li><a href="/diceandragons/ucp/login.php">Login</a></li>';
 				} else { 
-				echo '<li class="userbutton"><a href="#">' . $_SESSION['user']->username . '</a>
+				echo '<li class="userbutton">' . $_SESSION['user']->username . '
 					<div class="dropdown_user">
 						<a href="/diceandragons/ucp/changepassword.php">Change Password</a>
 						<a href="/diceandragons/ucp/changeemail.php">Change Email</a>
