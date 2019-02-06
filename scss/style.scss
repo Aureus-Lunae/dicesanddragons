@@ -1,5 +1,9 @@
 @import 'variables';
 
+* {
+	box-sizing: border-box;
+}
+
 html {
 	height: 100%;
 }
@@ -20,8 +24,8 @@ body {
 
 .content_wrapper {
 	flex: 1 0 auto;
-	margin-top: 150px;
-	box-sizing: border-box;
+	margin-top: 110px;
+	margin-bottom: 20px;
 }
 
 @import 'header';

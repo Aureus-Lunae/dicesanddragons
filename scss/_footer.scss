@@ -7,6 +7,7 @@
 	flex-wrap: wrap;
 	justify-content: center;
 	padding: 20px;
+	box-shadow: 0 -2px $shadow;
 
 	.credits {
 		width: 100%;
@@ -20,17 +21,37 @@
 		}
 	}
 
+	.contact {
+		padding: 10px;
+		font-size: 24px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+
+		h1 {
+			font-size: 32px;
+			font-weight: 700;
+			display: block;
+		}
+
+		.option {
+			margin-top: 8px;
+		}
+	}
+
 	.payment_options {
 		border-left: 3px solid $quaternary-color;
 		border-right: 3px solid $quaternary-color;
 		padding: 10px;
 		font-size: 24px;
-		width: 250px;
+		width: 275px;
 		display: flex;
+		flex-wrap: wrap;
 		justify-content: center;
 
 		.fab {
 			font-size: 96px;
+			margin: 4px;
 		}
 	}
 }

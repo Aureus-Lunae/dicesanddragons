@@ -6,7 +6,7 @@
 if (isset($_POST)){
 	$name = $_POST['product_name'];
 	$price = $_POST['product_price'];
-	$desc = $_POST['product_desc'];
+	$desc = htmlspecialchars($_POST['product_desc']);
 	$cat = $_POST['product_cat'];
 
 

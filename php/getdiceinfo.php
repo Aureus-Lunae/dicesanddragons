@@ -33,7 +33,7 @@
 	$name = $product['product_name'];
 	$price = $product['product_price'];
 	$photo = $product['product_photo'];
-	$desc = $product['product_desc'];
+	$desc = nl2br($product['product_desc']);
 
 	echo '
 	<div class="product_info">
@@ -52,7 +52,7 @@
     		<p>' . $desc . '</p>
     	</div>
       	
-     <div><div class="add"  onclick="addToCart(`' . $product_id . '`,`' . $name . '`,`' . $price . '`,`' . $cat . '/' . $photo . '`,`/diceandragons/php/carthandler.php`)">Add to cart
+     <div class="addwrapper"><div class="add"  onclick="addToCart(`' . $product_id . '`,`' . $name . '`,`' . $price . '`,`' . $cat . '/' . $photo . '`,`/diceandragons/php/carthandler.php`)">Add to cart
      </div></div>
     </div>
   </div>';

@@ -40,13 +40,15 @@ class getDBData {
  */
 class user {
 	private $user_id;
-	private $username;
 	private $access;
+	private $firstName;
+	private $lastName;
 
-	public function __construct($user_id, $username, $access) {
+	public function __construct($user_id, $access, $firstName, $lastName) {
 		$this -> user_id = $user_id;	
-		$this -> username = $username;
 		$this -> access = $access;
+		$this -> firstName = $firstName;
+		$this -> lastName = $lastName;
 	}
 
 	public function requiredAccess($access) {

@@ -15,7 +15,6 @@
 
 	$loginCheck = $login -> getData(array('email'=>"$email"));
 
-
 	$row_count = $loginCheck->rowCount();
 
 	if ($row_count == 0) {
@@ -33,9 +32,8 @@
 			$userResults = $loginUser -> getData(array('email'=> "$email"));
 
 			$user = $userResults->fetch(PDO::FETCH_ASSOC);
-			$username = $user['user_firstname'] . ' ' . $user['user_lastname'];
 
-			$_SESSION['user'] = new user($user['user_id'], $username, $user['access']);
+			$_SESSION['user'] = new user($user['user_id'], $user['access'], $user['user_firstname'], $user['user_lastname']);
 			$_SESSION['loggedin'] = 1;
 			header('Location: ' . $root . 'index.php');
 

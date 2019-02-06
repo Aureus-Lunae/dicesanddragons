@@ -8,95 +8,94 @@
 	top: 0;
 	z-index: 5;
 	width: 100%;
+	height: 100px;
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-end;
 	align-content: flex-end;
+	border-bottom: 1px solid $secondary-color;
 
 	.logo {
-		width: 320px;
 		margin-left: 10px;
 		display: block;
 
 		img {
-			width: 100%;
+			height: 90px;
+		}
+	}
+
+	.menu {
+		margin: auto 0;
+		padding: 0;
+		list-style: none;
+		clear: none;
+		max-height: none;
+
+		.userbutton {
+			max-width: 150px;
+			padding: 10px 24px;
+			text-align: center;
+			position: relative;
+			display: inline-block;
+			text-decoration: none;
+			color: $primary-text-color;
+			cursor: pointer;
+
+			&:hover {
+				background-color: $secondary-color;
+				color: $secondary_text_color;
+			}
+		}
+
+		.userbutton:hover .dropdown_user {
+			display: block;
+		}
+
+		.dropdown_user {
+			display: none;
+			position: absolute;
+			text-align: left;
+			width: 200px;
+			top: 57px;
+			left: 0;
+			z-index: 6;
+			background-color: $secondary-color;
+			color: $secondary_text_color;
+
+			a {
+				padding: 10px 24px;
+				display: block;
+				text-decoration: none;
+				color: $secondary_text_color;
+
+				&:hover {
+					text-decoration: underline;
+					background: $tertiary-color;
+					color: $tertairy_text_color;
+				}
+			}
+		}
+
+		li {
+			display: inline-block;
+
+			a {
+				padding: 10px 24px;
+				display: block;
+				text-decoration: none;
+				color: $primary-text-color;
+
+				&:hover {
+					text-decoration: underline;
+					background: $secondary-color;
+					color: $secondary_text_color;
+				}
+			}
 		}
 	}
 
 	.navbarheader {
-		display: block;
 		height: 100%;
-
-		.menu {
-			margin: auto 0;
-			padding: 0;
-			list-style: none;
-			clear: none;
-			max-height: none;
-
-			.userbutton {
-				padding: 16px 0px;
-				text-align: center;
-				width: 200px;
-				position: relative;
-				display: inline-block;
-				text-decoration: none;
-				color: $primary-text-color;
-				cursor: pointer;
-
-				&:hover {
-					background-color: $secondary-color;
-					color: $secondary_text_color;
-				}
-			}
-
-			.userbutton:hover .dropdown_user {
-				display: block;
-			}
-
-			.dropdown_user {
-				display: none;
-				position: absolute;
-				text-align: left;
-				width: 200px;
-				top: 57px;
-				left: 0;
-				z-index: 6;
-				background-color: $secondary-color;
-				color: $secondary_text_color;
-
-				a {
-					padding: 16px 24px;
-					display: block;
-					text-decoration: none;
-					color: $secondary_text_color !important;
-
-					&:hover {
-						text-decoration: underline;
-						background: $tertiary-color;
-						color: $tertairy_text_color !important;
-					}
-				}
-			}
-
-			li {
-				display: inline-block;
-				border-left: 1px solid $tertiary-color;
-
-				a {
-					padding: 16px 24px;
-					display: block;
-					text-decoration: none;
-					color: $primary-text-color;
-
-					&:hover {
-						text-decoration: underline;
-						background: $secondary-color;
-						color: $secondary_text_color;
-					}
-				}
-			}
-		}
 	}
 }
 
@@ -126,11 +125,6 @@
 		}
 	}
 
-	.cart {
-		border-left: 1px solid $tertiary-color;
-		margin-right: 30px;
-	}
-
 	.menu {
 		list-style: none;
 		clear: none;
@@ -143,8 +137,6 @@
 		}
 	}
 }
-
-
 
 #cartqnt {
 	font-weight: 700;

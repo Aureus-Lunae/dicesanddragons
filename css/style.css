@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -18,8 +22,8 @@ body {
 
 .content_wrapper {
   flex: 1 0 auto;
-  margin-top: 150px;
-  box-sizing: border-box;
+  margin-top: 110px;
+  margin-bottom: 20px;
 }
 
 /* Header */
@@ -32,48 +36,45 @@ body {
   top: 0;
   z-index: 5;
   width: 100%;
+  height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   align-content: flex-end;
+  border-bottom: 1px solid #004d66;
 }
 .headerwrapper .logo {
-  width: 320px;
   margin-left: 10px;
   display: block;
 }
 .headerwrapper .logo img {
-  width: 100%;
+  height: 90px;
 }
-.headerwrapper .navbarheader {
-  display: block;
-  height: 100%;
-}
-.headerwrapper .navbarheader .menu {
+.headerwrapper .menu {
   margin: auto 0;
   padding: 0;
   list-style: none;
   clear: none;
   max-height: none;
 }
-.headerwrapper .navbarheader .menu .userbutton {
-  padding: 16px 0px;
+.headerwrapper .menu .userbutton {
+  max-width: 150px;
+  padding: 10px 24px;
   text-align: center;
-  width: 200px;
   position: relative;
   display: inline-block;
   text-decoration: none;
   color: #1f1f1f;
   cursor: pointer;
 }
-.headerwrapper .navbarheader .menu .userbutton:hover {
+.headerwrapper .menu .userbutton:hover {
   background-color: #004d66;
   color: #e6e6e6;
 }
-.headerwrapper .navbarheader .menu .userbutton:hover .dropdown_user {
+.headerwrapper .menu .userbutton:hover .dropdown_user {
   display: block;
 }
-.headerwrapper .navbarheader .menu .dropdown_user {
+.headerwrapper .menu .dropdown_user {
   display: none;
   position: absolute;
   text-align: left;
@@ -84,31 +85,33 @@ body {
   background-color: #004d66;
   color: #e6e6e6;
 }
-.headerwrapper .navbarheader .menu .dropdown_user a {
-  padding: 16px 24px;
+.headerwrapper .menu .dropdown_user a {
+  padding: 10px 24px;
   display: block;
   text-decoration: none;
-  color: #e6e6e6 !important;
+  color: #e6e6e6;
 }
-.headerwrapper .navbarheader .menu .dropdown_user a:hover {
+.headerwrapper .menu .dropdown_user a:hover {
   text-decoration: underline;
   background: #436204;
-  color: white !important;
+  color: white;
 }
-.headerwrapper .navbarheader .menu li {
+.headerwrapper .menu li {
   display: inline-block;
-  border-left: 1px solid #436204;
 }
-.headerwrapper .navbarheader .menu li a {
-  padding: 16px 24px;
+.headerwrapper .menu li a {
+  padding: 10px 24px;
   display: block;
   text-decoration: none;
   color: #1f1f1f;
 }
-.headerwrapper .navbarheader .menu li a:hover {
+.headerwrapper .menu li a:hover {
   text-decoration: underline;
   background: #004d66;
   color: #e6e6e6;
+}
+.headerwrapper .navbarheader {
+  height: 100%;
 }
 
 .navbar2 {
@@ -134,10 +137,6 @@ body {
   text-decoration: underline;
   background: #436204;
   color: white;
-}
-.navbar2 .cart {
-  border-left: 1px solid #436204;
-  margin-right: 30px;
 }
 .navbar2 .menu {
   list-style: none;
@@ -174,9 +173,9 @@ body {
 }
 
 .herowrapper {
-  margin-top: -15px;
+  margin-top: -10px;
   margin-bottom: 25px;
-  height: calc(100vh - 120px);
+  height: calc(100vh - 90px);
   width: 100%;
   background-position: center;
   background-size: cover;
@@ -391,12 +390,11 @@ form button:active {
 .product_info .description {
   width: 45%;
   min-width: 400px;
-  max-height: 500px;
   margin: 10px;
   padding: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .product_info .description p {
   width: 100%;
@@ -410,6 +408,10 @@ form button:active {
 }
 .product_info .description .price_id_wrapper .price {
   font-size: 20px;
+}
+.product_info .description .addwrapper {
+  display: flex;
+  justify-content: center;
 }
 .product_info .description .add {
   display: inline-block;
@@ -441,9 +443,9 @@ form button:active {
 /* Product Cards */
 .product_card {
   margin: 10px;
-  border: 1px solid #436204;
+  border: 2px solid #66004d;
   border-radius: 8px;
-  width: 300px;
+  width: 304px;
   background: #004d66;
   color: #e6e6e6;
   transition: transform 0.5s;
@@ -458,7 +460,6 @@ form button:active {
   height: 300px;
   object-fit: cover;
   cursor: pointer;
-  border-bottom: 1px solid #004d66;
 }
 .product_card .details {
   display: flex;
@@ -651,6 +652,7 @@ form button:active {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
+  box-shadow: 0 -2px #666666;
 }
 .footer_wrapper .credits {
   width: 100%;
@@ -662,17 +664,34 @@ form button:active {
   border-top: 3px solid #66004d;
   text-align: center;
 }
+.footer_wrapper .contact {
+  padding: 10px;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.footer_wrapper .contact h1 {
+  font-size: 32px;
+  font-weight: 700;
+  display: block;
+}
+.footer_wrapper .contact .option {
+  margin-top: 8px;
+}
 .footer_wrapper .payment_options {
   border-left: 3px solid #66004d;
   border-right: 3px solid #66004d;
   padding: 10px;
   font-size: 24px;
-  width: 250px;
+  width: 275px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
 }
 .footer_wrapper .payment_options .fab {
   font-size: 96px;
+  margin: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */
