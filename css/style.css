@@ -47,9 +47,6 @@ body {
   margin-left: 10px;
   display: block;
 }
-.headerwrapper .logo img {
-  height: 90px;
-}
 .headerwrapper .menu {
   margin: auto 0;
   padding: 0;
@@ -59,6 +56,7 @@ body {
 }
 .headerwrapper .menu .userbutton {
   max-width: 150px;
+  max-height: 45px;
   padding: 10px 24px;
   text-align: center;
   position: relative;
@@ -66,6 +64,7 @@ body {
   text-decoration: none;
   color: #1f1f1f;
   cursor: pointer;
+  overflow: hidden;
 }
 .headerwrapper .menu .userbutton:hover {
   background-color: #004d66;
@@ -98,6 +97,7 @@ body {
 }
 .headerwrapper .menu li {
   display: inline-block;
+  white-space: nowrap;
 }
 .headerwrapper .menu li a {
   padding: 10px 24px;
@@ -153,6 +153,17 @@ body {
   font-weight: 700;
 }
 
+@media (min-width: 801px) {
+  .logo {
+    font-size: 48px;
+  }
+}
+@media (max-width: 800px) {
+  .logo {
+    font-size: 24px;
+    width: 120px;
+  }
+}
 .featured_banner {
   background: #004d66;
   color: #e6e6e6;
@@ -330,7 +341,7 @@ form button:active {
   background: #004d66;
   color: #e6e6e6;
   position: sticky;
-  top: 128px;
+  top: 95px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;

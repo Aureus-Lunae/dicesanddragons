@@ -7,7 +7,7 @@
 	</div>
 
 	<div class="logo">
-		<img src="/diceandragons/img/logo.png" alt="Dices and dragons" />
+		Dice <i class="fas fa-dice-d20"></i> Dragons
 	</div>
 
 	<div class="navbarheader">
