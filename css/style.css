@@ -756,6 +756,16 @@ form button:active {
   font-weight: 700;
   display: block;
 }
+.footer_wrapper .disclaimer a,
+.footer_wrapper .contact a {
+  text-decoration: none;
+  color: #77ff33;
+}
+.footer_wrapper .disclaimer a:hover,
+.footer_wrapper .contact a:hover {
+  text-decoration: underline;
+  color: #e6e6e6;
+}
 .footer_wrapper .disclaimer .option,
 .footer_wrapper .contact .option {
   margin-top: 8px;

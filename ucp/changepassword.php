@@ -13,7 +13,7 @@ $_SESSION['user']->requiredAccess(1);
   <meta name="keywords" content=" " />
   <meta name="author" content="Erwin Korsten" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Change User</title>
+  <title>Change password</title>
   <link href="https://fonts.googleapis.com/css?family=Laila:400,700|Roboto:400,700"
    rel="stylesheet">
   <link href="/diceandragons/css/style.css" rel="stylesheet" type="text/css"
