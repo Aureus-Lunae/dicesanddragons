@@ -46,7 +46,7 @@
     		<div class="cat">' . $cat . ' set</div>
     		<h1>' . $name . '</h1>
     		<div class="price_id_wrapper">
-    			<div class="price">€' . $price . '</div>
+    			<div class="price">€' .  number_format($price, 2, ',', '') . '</div>
     			<div class="product_id">Item #' . $product_id . '</div>
     		</div>
     		<p>' . $desc . '</p>

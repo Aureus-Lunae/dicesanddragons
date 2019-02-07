@@ -128,7 +128,7 @@ class productCard {
    	  	<div class="details">
    	  		<h1>' . $this -> cardName . '</h1>
    	  	</div>
-   	  	<div class="price" onclick="addToCart(`' . $this -> cardId . '`,`' . $this -> cardName . '`,`' . $this -> cardPrice . '`,`' . $this -> cardCat . '/' . $this -> cardPhoto . '`,`/diceandragons/php/carthandler.php`, showCart)">€' . $this -> cardPrice . '</div>
+   	  	<div class="price" onclick="addToCart(`' . $this -> cardId . '`,`' . $this -> cardName . '`,`' . $this -> cardPrice . '`,`' . $this -> cardCat . '/' . $this -> cardPhoto . '`,`/diceandragons/php/carthandler.php`, showCart)">€' . number_format($this -> cardPrice, 2, ',', '') . '</div>
    	  	</div>';
 	}
 }

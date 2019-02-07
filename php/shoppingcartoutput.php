@@ -16,13 +16,13 @@
    	echo '<div class="product">
    	<a href="/diceandragons/diceinfo.php?id=' . $id . '"><img src="/diceandragons' . $img . '" alt="' . $name . '" /></a><div class="product_data">
    	<div class="name">' . $name . '</div>
-   	<div class="price">€' . $price . ' ea.</div>
+   	<div class="price">€' . number_format($price, 2, ',', '') . ' ea.</div>
    	<div class="id">Item #' . $id . '</div></div>
    	<div class="quantity">quantity: 
       <i class="fas fa-minus" onclick="removeFromCart(`' . $id . '`,`/diceandragons/php/carthandler.php`, updateShoppingCart)"></i>
         <span class="bold"> ' . $quantity . ' </span>
       <i class="fas fa-plus"onclick="addToCart(`' . $id . '`,`' . $name . '`,`' . $price . '`,`' . $img . '`,`/diceandragons/php/carthandler.php`, updateShoppingCart)"></i></div>
-   	<div class="subtotal">Subtotal: <span class="bold">€' . $subtotal . '</span></div>
+   	<div class="subtotal">Subtotal: <span class="bold">€' . number_format($subtotal, 2, ',', '') . '</span></div>
    	<div class="remove" onclick="deleteFromCart(`' . $id . '`, `/diceandragons/php/carthandler.php`)"><i class="fas fa-trash-alt"></i></div>
    	</div>';
   }
@@ -31,7 +31,7 @@
 		<div class="total">
    	<div class="empty"></div>
    	<div class="quantity">Total products: ' . $_SESSION['cart'] -> totalQuantity . '</div>
-   	<div class="subtotal">Total: €' . $_SESSION['cart'] -> subTotalPrice . '</div>
+   	<div class="subtotal">Total: €' . number_format($_SESSION['cart'] -> subTotalPrice, 2, ',', '') . '</div>
    	</div>';
    
 ?>
