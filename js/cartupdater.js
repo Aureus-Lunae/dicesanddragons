@@ -1,10 +1,17 @@
 const modal = document.getElementById(`addToClass`);
 console.log(modal);
 
-const addToCart = (id, name, price, img, url) => {
+const addToCart = (id, name, price, img, url, output) => {
 	let compiledUrl =
 		`${url}?id=${id}&name=${name}&price=${price}&img=${img}&qnt=1&add=1`;
-	updateCart(compiledUrl, showCart);
+	updateCart(compiledUrl, output);
+	modal.style.display = `flex`;
+}
+
+const removeFromCart = (id, url, output) => {
+	let compiledUrl =
+		`${url}?id=${id}&name=Aureus&price=Lunae&img=Dice&qnt=1&add=-1`;
+	updateCart(compiledUrl, output);
 	modal.style.display = `flex`;
 }
 

@@ -4,6 +4,14 @@
 	margin-left: 48px;
 	width: calc(100% - 96px);
 
+	.bold {
+		font-weight: 700;
+	}
+
+	.fas {
+		cursor: pointer;
+	}
+
 	h1 {
 		font-size: 32px;
 		font-weight: 700px;

@@ -12,6 +12,10 @@
 		$_SESSION['cart'] -> addToCart($id, $name, $img, $price, $qnt);
 	}
 
+	if ($_GET['add'] == -1) {
+		$_SESSION['cart'] -> removeFromCart($id, 1);
+	}
+
 	if ($_GET['add'] == -2) {
 		$_SESSION['cart'] -> removeFromCart($id, 999);
 	}

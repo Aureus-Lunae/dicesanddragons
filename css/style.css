@@ -580,6 +580,12 @@ form button:active {
   margin-left: 48px;
   width: calc(100% - 96px);
 }
+.cart_items .bold {
+  font-weight: 700;
+}
+.cart_items .fas {
+  cursor: pointer;
+}
 .cart_items h1 {
   font-size: 32px;
   font-weight: 700px;

@@ -18,13 +18,14 @@
    	<div class="name">' . $name . '</div>
    	<div class="price">€' . $price . ' ea.</div>
    	<div class="id">Item #' . $id . '</div></div>
-   	<div class="quantity">quantity: ' . $quantity . '</div>
-   	<div class="subtotal">Subtotal: €' . $subtotal . '</div>
+   	<div class="quantity">quantity: 
+      <i class="fas fa-minus" onclick="removeFromCart(`' . $id . '`,`/diceandragons/php/carthandler.php`, updateShoppingCart)"></i>
+        <span class="bold"> ' . $quantity . ' </span>
+      <i class="fas fa-plus"onclick="addToCart(`' . $id . '`,`' . $name . '`,`' . $price . '`,`' . $img . '`,`/diceandragons/php/carthandler.php`, updateShoppingCart)"></i></div>
+   	<div class="subtotal">Subtotal: <span class="bold">€' . $subtotal . '</span></div>
    	<div class="remove" onclick="deleteFromCart(`' . $id . '`, `/diceandragons/php/carthandler.php`)"><i class="fas fa-trash-alt"></i></div>
    	</div>';
   }
-
-  //echo '<br />Quanity: ' . $_SESSION['cart'] -> totalQuantity . '<br />Total: €' . $_SESSION['cart'] -> subTotalPrice . '<br /><br />';
 
   echo '
 		<div class="total">

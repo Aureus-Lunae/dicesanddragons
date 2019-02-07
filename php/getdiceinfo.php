@@ -52,7 +52,7 @@
     		<p>' . $desc . '</p>
     	</div>
       	
-     <div class="addwrapper"><div class="add"  onclick="addToCart(`' . $product_id . '`,`' . $name . '`,`' . $price . '`,`' . $cat . '/' . $photo . '`,`/diceandragons/php/carthandler.php`)">Add to cart
+     <div class="addwrapper"><div class="add"  onclick="addToCart(`' . $product_id . '`,`' . $name . '`,`' . $price . '`,`' . $cat . '/' . $photo . '`,`/diceandragons/php/carthandler.php`, showCart)">Add to cart
      </div></div>
     </div>
   </div>';
