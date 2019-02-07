@@ -6,8 +6,7 @@
 	justify-content: flex-start;
 	align-items: flex-start;
 	align-content: flex-start;
-	margin-left: 48px;
-	width: calc(100% - 96px);
+	width: 100%;
 	border-radius: 8px;
 	z-index: 3;
 
@@ -28,10 +27,11 @@
 	background-size: cover;
 	display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 	color: $secondary_text_color;
 
 	h1 {
+		margin-bottom: 10vh;
 		font-size: 48px;
 		text-align: center;
 	}

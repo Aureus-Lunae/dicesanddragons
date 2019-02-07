@@ -170,8 +170,7 @@ body {
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  margin-left: 48px;
-  width: calc(100% - 96px);
+  width: 100%;
   border-radius: 8px;
   z-index: 3;
 }
@@ -191,10 +190,11 @@ body {
   background-size: cover;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   color: #e6e6e6;
 }
 .herowrapper h1 {
+  margin-bottom: 10vh;
   font-size: 48px;
   text-align: center;
 }
@@ -340,7 +340,6 @@ form button:active {
   align-content: flex-start;
   margin: 0 auto;
   width: 80%;
-  min-width: 400px;
 }
 
 /* filters */
@@ -351,23 +350,27 @@ form button:active {
   top: 95px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
   align-content: flex-start;
-  margin-left: 48px;
-  width: calc(100% - 96px);
+  width: 100%;
   border-radius: 8px;
   z-index: 3;
 }
 .products_filter .text {
   padding: 10px 10px 5px 10px;
-  border-right: 2px solid #436204;
   font-size: 20px;
   font-weight: 700;
 }
+.products_filter .filter_items {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
 .products_filter .filter {
   padding: 10px 10px 5px 10px;
-  width: 10%;
+  width: 23%;
+  border-left: 2px solid #436204;
   border-right: 2px solid #436204;
   text-align: center;
   font-size: 20px;
@@ -512,6 +515,15 @@ form button:active {
   background: #6b8a0f;
 }
 
+@media (max-width: 800px) {
+  .products_filter .filter_items {
+    width: 100%;
+  }
+  .products_filter .filter {
+    padding: 5px;
+    width: 23%;
+  }
+}
 /* Modal */
 .modal {
   top: 0;

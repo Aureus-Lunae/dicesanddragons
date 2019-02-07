@@ -37,17 +37,19 @@ require('php/classes.php');
        <div class="text">
          Choose your diceset:
        </div>
-       <div class="filter active" id="filter_all" onclick="catClick(`filter_all`, `php/productcardsfilter.php`, showData)">
-         All
-       </div>
-       <div class="filter" id="filter_7-dice" onclick="catClick(`filter_7-dice`, `php/productcardsfilter.php`, showData)">
-         7-Dice
-       </div>
-       <div class="filter" id="filter_12d6" onclick="catClick(`filter_12d6`, `php/productcardsfilter.php`, showData)">
-         12d6
-       </div>
-       <div class="filter" id="filter_10d10" onclick="catClick(`filter_10d10`, `php/productcardsfilter.php`, showData)">
-         10d10
+       <div class="filter_items">
+         <div class="filter active" id="filter_all" onclick="catClick(`filter_all`, `php/productcardsfilter.php`, showData)">
+           All
+         </div>
+         <div class="filter" id="filter_7-dice" onclick="catClick(`filter_7-dice`, `php/productcardsfilter.php`, showData)">
+           7-Dice
+         </div>
+         <div class="filter" id="filter_12d6" onclick="catClick(`filter_12d6`, `php/productcardsfilter.php`, showData)">
+           12d6
+         </div>
+         <div class="filter" id="filter_10d10" onclick="catClick(`filter_10d10`, `php/productcardsfilter.php`, showData)">
+           10d10
+      </div>
       </div>
      </div>
 
