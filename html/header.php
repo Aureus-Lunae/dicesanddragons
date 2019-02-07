@@ -23,7 +23,8 @@
 						<a href="/diceandragons/ucp/changeaddress.php">Change address</a>
 						<a href="/diceandragons/php/login/logout.php">Log out</a>';
 						if ($_SESSION['user']->access > 1) {
-							echo '<a href="/diceandragons/scp/addproduct.php">Add Products</a>';
+							echo '<a href="/diceandragons/scp/addproduct.php">Add Products</a>
+								<a href="/diceandragons/scp/listproducts.php">List Products</a>';
 						}
 					echo '</li>';
         }

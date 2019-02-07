@@ -56,7 +56,6 @@
     </div>
 
 	</div>
-    <?php require_once('html/footer.html'); ?>
 </body>
 
 </html>

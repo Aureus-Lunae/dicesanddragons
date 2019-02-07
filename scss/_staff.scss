@@ -1,0 +1,57 @@
+/* Staff only Area */
+
+.list_products {
+	margin-left: 48px;
+	width: calc(100% - 96px);
+
+	h1 {
+		font-size: 32px;
+		font-weight: 700px;
+		border-bottom: 3px solid $quaternary-color;
+	}
+
+	.products {
+		padding: 10px;
+
+		.heading {
+			border-bottom: 1px solid $quaternary-color;
+		}
+
+		.product {
+			max-width: 750px;
+		}
+
+		.id {
+			display: inline-block;
+			width: 130px;
+		}
+
+		.name {
+			display: inline-block;
+			width: 300px;
+			overflow: hidden;
+			word-wrap: none;
+			text-overflow: ellipsis;
+		}
+
+		.price {
+			display: inline-block;
+			width: 100px;
+			overflow: hidden;
+			word-wrap: none;
+			text-overflow: ellipsis;
+		}
+
+		.modify {
+			display: inline-block;
+			width: 200px;
+
+			a {
+				color: $primary_text_color;
+				text-decoration: none;
+			}
+		}
+
+	}
+
+}

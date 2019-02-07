@@ -252,6 +252,10 @@ form input[type=radio] {
 form input[type=file] {
   margin-top: 10px;
 }
+form #id {
+  display: none;
+}
+form #product_discount,
 form #product_price {
   width: 70px;
 }
@@ -778,6 +782,51 @@ form button:active {
     border-top: 3px solid #66004d;
     border-bottom: 3px solid #66004d;
   }
+}
+/* Staff only Area */
+.list_products {
+  margin-left: 48px;
+  width: calc(100% - 96px);
+}
+.list_products h1 {
+  font-size: 32px;
+  font-weight: 700px;
+  border-bottom: 3px solid #66004d;
+}
+.list_products .products {
+  padding: 10px;
+}
+.list_products .products .heading {
+  border-bottom: 1px solid #66004d;
+}
+.list_products .products .product {
+  max-width: 750px;
+}
+.list_products .products .id {
+  display: inline-block;
+  width: 130px;
+}
+.list_products .products .name {
+  display: inline-block;
+  width: 300px;
+  overflow: hidden;
+  word-wrap: none;
+  text-overflow: ellipsis;
+}
+.list_products .products .price {
+  display: inline-block;
+  width: 100px;
+  overflow: hidden;
+  word-wrap: none;
+  text-overflow: ellipsis;
+}
+.list_products .products .modify {
+  display: inline-block;
+  width: 200px;
+}
+.list_products .products .modify a {
+  color: #1f1f1f;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
