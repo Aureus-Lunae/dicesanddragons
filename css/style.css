@@ -712,7 +712,6 @@ form button:active {
   }
 }
 .footer_wrapper {
-  width: 100%;
   background: #004d66;
   color: #e6e6e6;
   flex-shrink: 0;
@@ -732,18 +731,22 @@ form button:active {
   border-top: 3px solid #66004d;
   text-align: center;
 }
+.footer_wrapper .disclaimer,
 .footer_wrapper .contact {
   padding: 10px;
   font-size: 24px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  width: 360px;
 }
+.footer_wrapper .disclaimer h1,
 .footer_wrapper .contact h1 {
   font-size: 32px;
   font-weight: 700;
   display: block;
 }
+.footer_wrapper .disclaimer .option,
 .footer_wrapper .contact .option {
   margin-top: 8px;
 }
@@ -760,6 +763,15 @@ form button:active {
 .footer_wrapper .payment_options .fab {
   font-size: 96px;
   margin: 4px;
+}
+
+@media (max-width: 800px) {
+  .footer_wrapper .payment_options {
+    border-left: none;
+    border-right: none;
+    border-top: 3px solid #66004d;
+    border-bottom: 3px solid #66004d;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

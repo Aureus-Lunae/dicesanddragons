@@ -1,5 +1,4 @@
 .footer_wrapper {
-	width: 100%;
 	background: $secondary-color;
 	color: $secondary_text_color;
 	flex-shrink: 0;
@@ -21,12 +20,14 @@
 		}
 	}
 
+	.disclaimer,
 	.contact {
 		padding: 10px;
 		font-size: 24px;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-start;
+		width: 360px;
 
 		h1 {
 			font-size: 32px;
@@ -38,6 +39,7 @@
 			margin-top: 8px;
 		}
 	}
+
 
 	.payment_options {
 		border-left: 3px solid $quaternary-color;
@@ -53,5 +55,14 @@
 			font-size: 96px;
 			margin: 4px;
 		}
+	}
+}
+
+@media (max-width: 800px) {
+	.footer_wrapper .payment_options {
+		border-left: none;
+		border-right: none;
+		border-top: 3px solid $quaternary-color;
+		border-bottom: 3px solid $quaternary-color;
 	}
 }
