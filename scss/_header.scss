@@ -16,8 +16,8 @@
 	border-bottom: 1px solid $secondary-color;
 
 	.logo {
-		margin-left: 10px;
 		display: block;
+		margin: 0 20px;
 	}
 
 
@@ -91,10 +91,6 @@
 			}
 		}
 	}
-
-	.navbarheader {
-		height: 100%;
-	}
 }
 
 .navbar2 {
@@ -143,12 +139,15 @@
 @media (min-width: 801px) {
 	.logo {
 		font-size: 48px;
+		margin: 0 20px;
 	}
 }
 
 @media (max-width: 800px) {
+
 	.logo {
 		font-size: 24px;
 		width: 120px;
+		margin: 0;
 	}
 }

@@ -14,7 +14,7 @@
    	$subtotal = $price * $quantity;
 
    	echo '<div class="product">
-   	<img src="/diceandragons' . $img . '" alt="' . $name . '" /><div class="product_data">
+   	<a href="/diceandragons/diceinfo.php?id=' . $id . '"><img src="/diceandragons' . $img . '" alt="' . $name . '" /></a><div class="product_data">
    	<div class="name">' . $name . '</div>
    	<div class="price">€' . $price . ' ea.</div>
    	<div class="id">Item #' . $id . '</div></div>
