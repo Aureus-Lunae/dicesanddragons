@@ -23,6 +23,7 @@ require('php/classes.php');
 	<?php require_once('html/header.php'); ?>
 	<div class="content_wrapper">
     <div class="herowrapper" style="background-image: url('img/heroimg.jpg')">
+      <h1>Even a dragon's luck depends on the roll of the dice.</h1>
     </div>
     <div class="products_wrapper" id="product_output">
     <div class="featured_banner">

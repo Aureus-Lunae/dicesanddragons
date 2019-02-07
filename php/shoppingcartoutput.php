@@ -1,8 +1,5 @@
 <?php
-	
   require_once 'classes.php';
-
-
 
   if (!$_SESSION['cart'] -> cartproducts) {
     echo '<div class="product"><div class="product_data"><div class="name">Your basket is empty.</div></div></div>';

@@ -56,7 +56,7 @@
 			padding: 20px;
 			text-align: center;
 			outline: none;
-			pointer: button;
+			cursor: pointer;
 
 			&:active {
 				position: relative;
@@ -70,13 +70,12 @@
 	.product {
 		padding: 10px;
 		display: flex;
-		width: 100%;
+		flex-wrap: wrap;
 
 		.product_data {
 			margin-left: 10px;
 			width: 40%;
 			display: flex;
-			height: 100px;
 			flex-direction: column;
 			justify-content: flex-start;
 			align-items: flex-start;
@@ -84,7 +83,7 @@
 
 		.name {
 			display: block;
-			font-weight: 700px;
+			font-weight: 700;
 			font-size: 24px;
 		}
 
@@ -111,5 +110,64 @@
 			border: 1px solid $quaternary-color;
 		}
 
+	}
+}
+
+@media (max-width: 800px) {
+	.cart_items {
+		.total {
+			.empty {
+				display: none;
+			}
+
+			.quantity {
+				width: 50%;
+				padding-right: 20px;
+
+			}
+
+			.subtotal {
+				width: 50%;
+			}
+		}
+
+		.checkout {
+			.empty {
+				display: none;
+			}
+
+			.payment {
+				width: 100%;
+			}
+		}
+
+		.product {
+			justify-content: center;
+			margin-bottom: 20px;
+
+			.product_data {
+				flex-direction: row-reverse;
+				flex-wrap: wrap;
+				width: 100%;
+				margin-left: 0px;
+			}
+
+			.name {
+				width: 100%;
+			}
+
+			.quantity,
+			.subtotal,
+			.id,
+			.price {
+				display: block;
+				width: 50%;
+			}
+
+			.remove {
+				margin-top: 10px;
+			}
+
+		}
 	}
 }

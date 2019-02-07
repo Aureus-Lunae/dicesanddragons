@@ -19,10 +19,20 @@
 }
 
 .herowrapper {
+	font-family: 'Laila', serif;
 	margin-top: -10px;
 	margin-bottom: 25px;
 	height: calc(100vh - 90px);
 	width: 100%;
 	background-position: center;
 	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $secondary_text_color;
+
+	h1 {
+		font-size: 48px;
+		text-align: center;
+	}
 }
