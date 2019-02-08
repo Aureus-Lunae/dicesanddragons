@@ -192,6 +192,24 @@
 
           <form action="/diceandragons/php/login/registerhandler.php" method="POST">
             <h1>Register</h1>
+		  
+            <?php
+                if (isset($_SESSION['error'])){
+                  switch ($_SESSION['error']){
+                    case 31: 
+                      $error = 'Email already exist!';
+                      break;
+                case 20: 
+                  $error = 'Passwords do not match!';
+                  break;
+                    default:
+                      $error = 'An unknown error has occured!';
+                      break;
+                  }
+                  unset ($_SESSION['error']);
+                  echo '<label class="error">' . $error . '</label>';
+                }
+            ?>
 
             <label for="firstname">First Name*:</label>
             <input type="text" id="firstname" name="firstname" maxlength="32"autofocus>
