@@ -31,6 +31,22 @@ require('../php/classes.php');
           if ($_SESSION['loggedin'] == 0) {
         ?>
           <form action="/diceandragons/php/login/loginhandler.php" method="POST">
+     
+             <?php
+                if (isset($_SESSION['success'])){
+                  switch ($_SESSION['success']){
+                    case 35: 
+                      $sussess = 'Account has been created!';
+                      echo '<label class="success">' . $sussess . '</label>';
+                      break;
+                    default:
+                      $_SESSION['error'] = 1;
+                      break;
+                  }
+                  unset ($_SESSION['success']);
+                }
+            ?>
+            
             <h1>Login</h1>
 
             <label for="email">email:</label>
